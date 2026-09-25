@@ -1,0 +1,32 @@
+name: Diagnose photo delivery
+on:
+  push:
+    branches: ['maintenance/photo-diagnostics']
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Inspect a castle photo and a town photo
+        run: |
+          python - <<'PY'
+          import json,urllib.request,urllib.parse,time
+          base='https://commons.wikimedia.org/w/api.php?'
+          query=urllib.parse.urlencode({'action':'query','format':'json','formatversion':2,'prop':'imageinfo','iiprop':'url|size|extmetadata','iiurlwidth':640,'titles':'File:Kumamoto Castle Keep Tower 20221022-3.jpg|File:Hita-city Mameda01.jpg'})
+          headers={'User-Agent':'KyushuCycleGuide/1.0 (https://github.com/25d-228/kyushu-cycle-guide)'}
+          with urllib.request.urlopen(urllib.request.Request(base+query,headers=headers),timeout=20) as r:data=json.load(r)
+          for page in data['query']['pages']:
+              print('METADATA',json.dumps(page,ensure_ascii=False),flush=True)
+              info=page.get('imageinfo',[{}])[0]
+              for key in ['thumburl','url']:
+                  url=info.get(key,'')
+                  if url.startswith('//'):url='https:'+url
+                  if not url:continue
+                  try:
+                      start=time.time()
+                      with urllib.request.urlopen(urllib.request.Request(url,headers=headers),timeout=12) as r:
+                          print('DOWNLOAD',key,r.status,r.headers.get('content-type'),len(r.read()),round(time.time()-start,2),flush=True)
+                  except Exception as e:print('DOWNLOAD_ERROR',key,str(e),flush=True)
+          PY
