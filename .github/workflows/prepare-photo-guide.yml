@@ -1,0 +1,50 @@
+name: Prepare Japanese photo guide
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prepare-photo-guide
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Install image and browser test tools
+        run: |
+          python -m pip install Pillow playwright
+          python -m playwright install chromium --with-deps
+      - name: Refresh licensed photographs and preserve reviewed selections
+        run: |
+          python -u scripts/prepare_site.py
+          python -u maintenance/finalize_site.py
+      - name: Check navigation, photos, and mobile layout
+        run: python -u scripts/test_site.py
+      - name: Save validated website on main
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A index.html .nojekyll assets scripts PHOTO-CREDITS.md photo-build-report.json browser-test-report.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh verified photographs while preserving reviewed captions'
+            git push origin HEAD:main
+          fi
+          echo "PREPARED_COMMIT=$(git rev-parse HEAD)"
+          echo "PREPARED_TREE=$(git rev-parse HEAD^{tree})"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: photo-guide-validation
+          path: |
+            photo-build-report.json
+            browser-test-report.json
+            test-*.png
+          retention-days: 7
