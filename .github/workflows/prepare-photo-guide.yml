@@ -1,9 +1,6 @@
 name: Prepare Japanese photo guide
 
 on:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/prepare-photo-guide.yml', 'scripts/**', 'assets/guide-enhancements.js']
   workflow_dispatch:
 
 permissions:
@@ -25,45 +22,29 @@ jobs:
         run: |
           python -m pip install Pillow playwright
           python -m playwright install chromium --with-deps
-      - name: Normalize initial photo-import and editorial rules
+      - name: Refresh licensed photographs and preserve reviewed selections
         run: |
-          python maintenance/repair-photo-import.py
-          python - <<'PY'
-          from pathlib import Path
-          path=Path('scripts/prepare_site.py')
-          source=path.read_text()
-          if "source=re.sub(r'(?<!宿)泊地'" not in source:
-              source=source.replace("source=re.sub(r'\\n?<!-- photo-guide-assets -->", "source=re.sub(r'(?<!宿)泊地','宿泊地',source)\nsource=re.sub(r'\\n?<!-- photo-guide-assets -->")
-          path.write_text(source)
-          path=Path('scripts/test_site.py')
-          source=path.read_text()
-          if 'i.loading=' not in source:
-              source=source.replace("            page.wait_for_function('Array.from", "            page.locator('.journey-rest-gallery img').evaluate_all(\"images=>images.forEach(i=>i.loading='eager')\")\n            page.wait_for_function('Array.from")
-          path.write_text(source)
-          PY
-      - name: Download licensed photos and rewrite the Japanese copy
-        run: python -u scripts/prepare_site.py
+          python -u scripts/prepare_site.py
+          python -u maintenance/finalize_site.py
       - name: Check navigation, photos, and mobile layout
         run: python -u scripts/test_site.py
       - name: Save validated website on main
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html .nojekyll assets scripts PHOTO-CREDITS.md photo-build-report.json browser-test-report.json
+          git add -A index.html .nojekyll assets scripts PHOTO-CREDITS.md photo-build-report.json browser-test-report.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Build verified Japanese guide with attributed destination photographs'
+            git commit -m 'Refresh verified photographs while preserving reviewed captions'
             git push origin HEAD:main
           fi
           echo "PREPARED_COMMIT=$(git rev-parse HEAD)"
           echo "PREPARED_TREE=$(git rev-parse HEAD^{tree})"
-      - name: Retain build reports and screenshots
+      - uses: actions/upload-artifact@v4
         if: always()
-        uses: actions/upload-artifact@v4
         with:
           name: photo-guide-validation
           path: |
             photo-build-report.json
             browser-test-report.json
-            assets/photos/
             test-*.png
           retention-days: 7
