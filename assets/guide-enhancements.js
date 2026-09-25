@@ -41,23 +41,6 @@
   #destinationDialog .journey-photo-grid.single img { max-height: 320px; aspect-ratio: 16 / 7; }
 }
 @media screen and (min-width: 960px) {
-  #destinationDialog .dialog-journey {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 290px;
-    gap: 9px 22px;
-    padding: 14px 32px;
-    align-items: center;
-  }
-  #destinationDialog .dialog-journey .journey-day-row { grid-column: 1; grid-row: 1; }
-  #destinationDialog .dialog-journey .journey-stop-row { grid-column: 1; grid-row: 2; }
-  #destinationDialog .dialog-journey .journey-rest-context { grid-column: 1; grid-row: 3; margin: 0; }
-  #destinationDialog .journey-mini-map {
-    grid-column: 2;
-    grid-row: 1 / 4;
-    margin: 0;
-    height: 100%;
-    min-height: 102px;
-  }
   #destinationDialog .journey-rest-gallery .journey-photo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   #destinationDialog .journey-rest-gallery .journey-photo-grid > figure:first-child { grid-column: auto; }
   #destinationDialog .journey-rest-gallery .journey-photo-grid > figure:first-child img { aspect-ratio: 4 / 3; }
@@ -101,7 +84,7 @@
   #destinationDialog .dialog-footer { padding-top: 7px; padding-bottom: 7px; }
   #destinationDialog .dialog-body { padding: 14px 20px; }
   #destinationDialog .journey-mini-map { display: none; }
-  #destinationDialog .dialog-journey { display: block; padding-top: 8px; padding-bottom: 8px; }
+  #destinationDialog .dialog-journey { padding-top: 8px; padding-bottom: 8px; }
   #destinationDialog .dialog-journey .journey-stop-row { margin-top: 6px; }
 }
 
