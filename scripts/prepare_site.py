@@ -198,7 +198,7 @@ def photo(title):
             print('SKIP_NO_AUTHOR',name,str(meta)[:700],flush=True);continue
         urls=[info.get('thumburl',''),info.get('url','')]
         urls=['https:'+u if u.startswith('//') else u for u in urls]
-        url=next((u for u in urls if u.startswith('https://upload.wikimedia.org/')),'')
+        url=next((u for u in urls if urllib.parse.urlparse(u).hostname in ['thumb.wikimedia.org','upload.wikimedia.org']),'')
         if not url:
             print('SKIP_URL',name,urls,flush=True);continue
         digest=hashlib.sha256(name.encode()).hexdigest()[:18]

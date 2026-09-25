@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-25-photos-ja-v1",
+  "version": "2026-09-25-photos-ja-v2",
   "places": {
     "折尾": [
       {
@@ -18,7 +18,7 @@
     "鞍手": [
       {
         "src": "assets/photos/78a0aeb3bb5177d5e7.jpg",
-        "label": "鞍手町",
+        "label": "古月横穴",
         "article": "鞍手町",
         "author": "Muyo",
         "license": "CC BY-SA 4.0",
@@ -32,11 +32,11 @@
     "宮若": [
       {
         "src": "assets/photos/2d073bfe8f80a54106.jpg",
-        "label": "宮若市",
+        "label": "脇田温泉",
         "article": "宮若市",
         "author": "水だらけのプール",
         "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "source": "https://commons.wikimedia.org/wiki/File:Wakita_Onsen_20260628_01.jpg",
         "width": 960,
         "height": 538,
@@ -85,7 +85,7 @@
         "width": 960,
         "height": 720,
         "original": "View of Chikuzen-Yamae Station.jpg",
-        "context": "冷水峠の立ち寄り候補・周辺の風景です。"
+        "context": "写真は峠周辺の筑前山家駅です。冷水峠そのものを写した写真ではありません。"
       }
     ],
     "筑前": [
@@ -110,7 +110,7 @@
         "article": "甘木公園",
         "author": "水だらけのプール",
         "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "source": "https://commons.wikimedia.org/wiki/File:Amagi_Park_02.jpg",
         "width": 960,
         "height": 538,
@@ -136,7 +136,7 @@
     "朝倉": [
       {
         "src": "assets/photos/33a7b5e9df87fc57da.jpg",
-        "label": "朝倉市",
+        "label": "菱野の三連水車",
         "article": "朝倉市",
         "author": "切干大根",
         "license": "CC BY-SA 4.0",
@@ -154,7 +154,7 @@
         "article": "田主丸駅",
         "author": "Bakkai at Japanese Wikipedia",
         "license": "CC BY-SA 3.0",
-        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Tanushimaru_Station.JPG",
         "width": 640,
         "height": 480,
@@ -164,7 +164,7 @@
     "うきは": [
       {
         "src": "assets/photos/42b3cd79e5d703c13e.jpg",
-        "label": "吉井町 (福岡県)",
+        "label": "筑後吉井の白壁の町並み",
         "article": "吉井町 (福岡県)",
         "author": "663highland",
         "license": "CC BY 2.5",
@@ -198,7 +198,7 @@
         "article": "豆田町",
         "author": "Miya.m",
         "license": "CC BY-SA 3.0",
-        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Hita-city_Mameda01.jpg",
         "width": 909,
         "height": 720,
@@ -213,7 +213,7 @@
         "article": "大鶴駅",
         "author": "KXT2",
         "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "source": "https://commons.wikimedia.org/wiki/File:Hitahikosan_Line_BRT_Otsuru_station_for_Hita.jpg",
         "width": 960,
         "height": 720,
@@ -237,7 +237,7 @@
     "小石原": [
       {
         "src": "assets/photos/7d16a53443bba4f19c.jpg",
-        "label": "小石原村",
+        "label": "小石原焼伝統産業会館",
         "article": "小石原村",
         "author": "STA3816",
         "license": "CC BY-SA 3.0",
@@ -270,7 +270,7 @@
         "article": "石炭記念公園",
         "author": "M-MIX",
         "license": "CC BY-SA 3.0",
-        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Mitsui-Tagawa_coal_mine_Chimney.jpg",
         "width": 960,
         "height": 720,
@@ -285,7 +285,7 @@
         "article": "金田駅",
         "author": "The original uploader was おんさか at Japanese Wikipedia.",
         "license": "CC BY-SA 3.0",
-        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Kanada_Station.JPG",
         "width": 960,
         "height": 720,
@@ -329,7 +329,7 @@
         "article": "芦屋町",
         "author": "水だらけのプール",
         "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "source": "https://commons.wikimedia.org/wiki/File:Ashiya_Beach_Park_02.jpg",
         "width": 960,
         "height": 538,
@@ -339,11 +339,11 @@
     "岡垣": [
       {
         "src": "assets/photos/aaeec6cf3d2f437883.jpg",
-        "label": "岡垣町",
+        "label": "三里松原海岸",
         "article": "岡垣町",
         "author": "水だらけのプール",
         "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "source": "https://commons.wikimedia.org/wiki/File:Sanri_Matsubara_Coast_and_Cycling_Road.jpg",
         "width": 960,
         "height": 538,
@@ -357,7 +357,7 @@
         "article": "宗像大社",
         "author": "Saigen Jiro",
         "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "source": "https://commons.wikimedia.org/wiki/File:Munakata-taisha,_shaden.JPG",
         "width": 960,
         "height": 638,
@@ -443,7 +443,7 @@
     "伊万里": [
       {
         "src": "assets/photos/a8b6b13d0bea0aa5f5.jpg",
-        "label": "伊万里市",
+        "label": "大川内山",
         "article": "伊万里市",
         "author": "Akiyoshi's Room",
         "license": "Public domain",
@@ -457,7 +457,7 @@
     "有田": [
       {
         "src": "assets/photos/e88957977c04425177.jpg",
-        "label": "有田町",
+        "label": "有田駅周辺",
         "article": "有田町",
         "author": "そらみみ",
         "license": "CC BY-SA 4.0",
@@ -471,7 +471,7 @@
     "佐世保": [
       {
         "src": "assets/photos/bfcc0db209a882bf12.jpg",
-        "label": "九十九島 (西海国立公園)",
+        "label": "九十九島",
         "article": "九十九島 (西海国立公園)",
         "author": "Atsasebo",
         "license": "CC BY-SA 3.0",
@@ -618,16 +618,16 @@
     ],
     "熊本港": [
       {
-        "src": "assets/photos/fb33fae4ebb1fb093c.jpg",
-        "label": "熊本港",
+        "src": "assets/photos/e9f22e8ed159f182e5.jpg",
+        "label": "熊本港フェリーターミナル",
         "article": "熊本港",
-        "author": "Gazouya-japan",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Container_%E3%80%90_42P3_%E3%80%91_TRIU_044668(0)---No,1_%E3%80%90_Pictures_taken_in_Japan_%E3%80%91.jpg",
-        "width": 960,
-        "height": 720,
-        "original": "Container 【 42P3 】 TRIU 044668(0)---No,1 【 Pictures taken in Japan 】.jpg"
+        "author": "MK Products",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Kumamoto-Port_ferry_terminal_1.jpg",
+        "width": 800,
+        "height": 450,
+        "original": "Kumamoto-Port ferry terminal 1.jpg"
       }
     ],
     "熊本": [
@@ -652,7 +652,7 @@
         "article": "宇土城",
         "author": "Saigen Jiro",
         "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "source": "https://commons.wikimedia.org/wiki/File:Uto_Castle_(Kinsei),_honmaru.jpg",
         "width": 960,
         "height": 627,
@@ -667,7 +667,7 @@
         "article": "八代城",
         "author": "The original uploader was Kumamoto taro at Japanese Wikipedia.",
         "license": "CC BY-SA 3.0",
-        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Yatsushiro_castle.JPG",
         "width": 960,
         "height": 720,
@@ -678,7 +678,7 @@
     "芦北": [
       {
         "src": "assets/photos/5b7e0800f4c2e2c590.jpg",
-        "label": "芦北町",
+        "label": "芦北海浜総合公園",
         "article": "芦北町",
         "author": "JoshBerglund19",
         "license": "CC BY 2.0",
@@ -692,7 +692,7 @@
     "水俣": [
       {
         "src": "assets/photos/3776a2cfbd67e582da.jpg",
-        "label": "エコパーク水俣",
+        "label": "エコパーク水俣のバラ園",
         "article": "エコパーク水俣",
         "author": "hyolee2",
         "license": "CC BY-SA 3.0",
@@ -707,7 +707,7 @@
     "出水": [
       {
         "src": "assets/photos/4fb6ef695537549205.jpg",
-        "label": "出水麓",
+        "label": "出水麓武家屋敷群",
         "article": "出水麓",
         "author": "Asturio Cantabrio",
         "license": "CC BY-SA 4.0",
@@ -794,7 +794,7 @@
     "鹿児島港": [
       {
         "src": "assets/photos/17e1915986e5582790.jpg",
-        "label": "鹿児島港",
+        "label": "城山から望む鹿児島市街と桜島",
         "article": "鹿児島港",
         "author": "こたつむり from Hokkaidō, Japan.",
         "license": "CC BY-SA 2.1 jp",
@@ -802,13 +802,14 @@
         "source": "https://commons.wikimedia.org/wiki/File:Sakurajima_-%E5%9F%8E%E5%B1%B1%E5%B1%95%E6%9C%9B%E5%8F%B0%E3%82%88%E3%82%8A.jpg",
         "width": 640,
         "height": 427,
-        "original": "Sakurajima -城山展望台より.jpg"
+        "original": "Sakurajima -城山展望台より.jpg",
+        "context": "鹿児島港周辺の景色を、城山から撮影した写真です。"
       }
     ],
     "桜島港": [
       {
         "src": "assets/photos/32133606f6efee0348.jpg",
-        "label": "桜島港",
+        "label": "桜島（フェリーからの眺め）",
         "article": "桜島港",
         "author": "Christophe95",
         "license": "CC BY-SA 4.0",
@@ -822,7 +823,7 @@
     "桜島南": [
       {
         "src": "assets/photos/32133606f6efee0348.jpg",
-        "label": "桜島",
+        "label": "桜島（フェリーからの眺め）",
         "article": "桜島",
         "author": "Christophe95",
         "license": "CC BY-SA 4.0",
@@ -850,23 +851,22 @@
     ],
     "黒神": [
       {
-        "src": "assets/photos/af47addafc00719e32.jpg",
-        "label": "腹五社神社",
-        "article": "黒神埋没鳥居",
+        "src": "assets/photos/3e2afdb0ea2ed4d238.jpg",
+        "label": "黒神埋没鳥居",
+        "article": "黒神",
         "author": "そらみみ",
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Honden_of_Haragosha_Shrine.JPG",
+        "source": "https://commons.wikimedia.org/wiki/File:Buried_torii_near_Kurokami-Cho,_Kagoshima.JPG",
         "width": 960,
         "height": 720,
-        "original": "Honden of Haragosha Shrine.JPG",
-        "context": "黒神の立ち寄り候補・周辺の風景です。"
+        "original": "Buried torii near Kurokami-Cho, Kagoshima.JPG"
       }
     ],
     "垂水": [
       {
         "src": "assets/photos/2d169e0649caea82b1.jpg",
-        "label": "垂水市",
+        "label": "海潟と桜島",
         "article": "垂水市",
         "author": "ja:User:Sanjo",
         "license": "CC BY-SA 3.0",
@@ -898,7 +898,7 @@
         "article": "大崎町",
         "author": "Saigen Jiro",
         "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "source": "https://commons.wikimedia.org/wiki/File:Yokose_Kofun,_zenkei-2.jpg",
         "width": 960,
         "height": 638,
@@ -950,7 +950,7 @@
     "日南": [
       {
         "src": "assets/photos/f5253ef20d263f2e22.jpg",
-        "label": "日南市",
+        "label": "鵜戸神宮",
         "article": "日南市",
         "author": "JKT-c",
         "license": "CC BY 3.0",
@@ -1009,7 +1009,7 @@
     "高鍋": [
       {
         "src": "assets/photos/559e67228dd8e56b19.jpg",
-        "label": "高鍋町",
+        "label": "高鍋大師",
         "article": "高鍋町",
         "author": "原田純児",
         "license": "CC BY-SA 4.0",
@@ -1027,7 +1027,7 @@
         "article": "都農神社",
         "author": "Saigen Jiro",
         "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "source": "https://commons.wikimedia.org/wiki/File:Tsuno-jinja_keidai.JPG",
         "width": 960,
         "height": 638,
@@ -1072,7 +1072,7 @@
         "article": "北川駅",
         "author": "kuromaster",
         "license": "CC BY-SA 3.0",
-        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
         "source": "https://commons.wikimedia.org/wiki/File:JR_Kyushu_Kitagawa_station.jpg",
         "width": 960,
         "height": 720,
@@ -1100,7 +1100,7 @@
         "article": "直川駅",
         "author": "はづき裕一 (Hazuyu1 at Japanese Wikipedia)",
         "license": "CC BY-SA 3.0",
-        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Naokawa_Station.JPG",
         "width": 960,
         "height": 720,
@@ -1139,15 +1139,16 @@
     "臼杵": [
       {
         "src": "assets/photos/87a1a8b83a064a6691.jpg",
-        "label": "臼杵市",
+        "label": "臼杵石仏",
         "article": "臼杵市",
         "author": "Si-take.",
         "license": "CC BY-SA 3.0",
-        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Buddhism_statue_of_USUKI_(Furuzono)_Oita,JAPAN.JPG",
         "width": 960,
         "height": 720,
-        "original": "Buddhism statue of USUKI (Furuzono) Oita,JAPAN.JPG"
+        "original": "Buddhism statue of USUKI (Furuzono) Oita,JAPAN.JPG",
+        "context": "市中心部から離れた観光候補です。この写真の場所への立ち寄りは、日程に自動では追加されません。"
       }
     ],
     "大分": [
@@ -1270,7 +1271,7 @@
     "小倉": [
       {
         "src": "assets/photos/8949339e21cade23a4.jpg",
-        "label": "小倉城",
+        "label": "小倉城庭園",
         "article": "小倉城",
         "author": "Keramahani",
         "license": "CC BY-SA 4.0",
@@ -1289,7 +1290,7 @@
         "article": "若戸大橋",
         "author": "Original uploader was UE-PON2600 at ja.wikipedia",
         "license": "CC BY-SA 3.0",
-        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Wakato_Narrows_Bridge2.jpg",
         "width": 960,
         "height": 540,
@@ -1318,7 +1319,7 @@
         "article": "甘木公園",
         "author": "水だらけのプール",
         "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "source": "https://commons.wikimedia.org/wiki/File:Amagi_Park_02.jpg",
         "width": 960,
         "height": 538,
@@ -1329,7 +1330,7 @@
     "桜島": [
       {
         "src": "assets/photos/32133606f6efee0348.jpg",
-        "label": "桜島港",
+        "label": "桜島（フェリーからの眺め）",
         "article": "桜島港",
         "author": "Christophe95",
         "license": "CC BY-SA 4.0",
@@ -1349,7 +1350,7 @@
         "article": "豆田町",
         "author": "Miya.m",
         "license": "CC BY-SA 3.0",
-        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Hita-city_Mameda01.jpg",
         "width": 909,
         "height": 720,
@@ -1366,18 +1367,6 @@
         "width": 960,
         "height": 720,
         "original": "Hita Tenryo Museum 20161231.jpg"
-      },
-      {
-        "src": "assets/photos/185884bb4432a07476.jpg",
-        "label": "日田市",
-        "article": "日田市",
-        "author": "Mukai",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Gionn_Festival_Hita_Ooita.jpg",
-        "width": 540,
-        "height": 720,
-        "original": "Gionn Festival Hita Ooita.jpg"
       },
       {
         "src": "assets/photos/0f7d7fe45b67b00492.jpg",
@@ -1444,6 +1433,18 @@
         "original": "Miyazaki Miyazaki-jingu Haiden 1.JPG"
       },
       {
+        "src": "assets/photos/e5bda2758811bfb983.jpg",
+        "label": "宮崎科学技術館の屋外ロケット展示",
+        "article": "宮崎科学技術館",
+        "author": "user:masamic",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:H-I-FullScaledModel-20090827.jpg",
+        "width": 479,
+        "height": 720,
+        "original": "H-I-FullScaledModel-20090827.jpg"
+      },
+      {
         "src": "assets/photos/c677140de39535315d.jpg",
         "label": "宮崎駅",
         "article": "宮崎駅",
@@ -1500,7 +1501,7 @@
       "article": "甘木公園",
       "author": "水だらけのプール",
       "license": "CC0",
-      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
       "source": "https://commons.wikimedia.org/wiki/File:Amagi_Park_02.jpg",
       "width": 960,
       "height": 538,
@@ -1536,7 +1537,7 @@
       "article": "豆田町",
       "author": "Miya.m",
       "license": "CC BY-SA 3.0",
-      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
       "source": "https://commons.wikimedia.org/wiki/File:Hita-city_Mameda01.jpg",
       "width": 909,
       "height": 720,
@@ -1548,7 +1549,7 @@
       "article": "石炭記念公園",
       "author": "M-MIX",
       "license": "CC BY-SA 3.0",
-      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
       "source": "https://commons.wikimedia.org/wiki/File:Mitsui-Tagawa_coal_mine_Chimney.jpg",
       "width": 960,
       "height": 720,

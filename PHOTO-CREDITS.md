@@ -1,101 +1,99 @@
 # 写真の出典
-各写真は表示用に縮小しています。画面上では一部をトリミングして表示します。
+各写真は表示用に縮小し、画面上では一部をトリミングしています。写真ごとの利用許諾条件は以下の出典で確認できます。
 
-- エコパーク水俣 — hyolee2 — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Minamata_Rose_Park1.JPG
-- 中津城 — Suicasmo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Nakatsu_Castle_20221023-2.jpg
-- 串木野駅 — Junpei5885 — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Kushikino_Station1.jpg
-- 串間駅 — ja:User:Sanjo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:JR_Kushima_Station_2023.jpg
-- 九十九島 (西海国立公園) — Atsasebo — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Kitakujyukushima_from_nagushiyama.jpg
-- 九十九島パールシーリゾート — 663highland — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:200320_Kujukushima_Pearl_Sea_Resort_Sasebo_Nagasaki_pref_Japan10s3.jpg
-- 伊万里市 — Akiyoshi's Room — Public domain — https://commons.wikimedia.org/wiki/File:Nabeshimayaki_Okawachiyama_Imari-shi_Saga-ken_PB110126.jpg
-- 伊集院駅 — Suikotei — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Ij%C5%ABin_Station_Southside_20180503.jpg
-- 佐伯城 — Mukai — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Saiki_castle_05.jpg
-- 八代城 — The original uploader was Kumamoto taro at Japanese Wikipedia. — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Yatsushiro_castle.JPG
-- 出島 — STA3816 — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Dejima.jpg
-- 出水麓 — Asturio Cantabrio — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Izumi-Fumoto_Tatebaba_ac_(1).jpg
-- 北川駅 — kuromaster — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:JR_Kyushu_Kitagawa_station.jpg
-- 南郷駅 — Tokyo-Good — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Nango-station-building2020.jpg
-- 原鶴温泉 — Nissy-KITAQ — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Harazuru_Onsen.JPG
-- 吉井町 (福岡県) — 663highland — CC BY 2.5 — https://commons.wikimedia.org/wiki/File:Chikugo-Yoshii04s5s3200.jpg
-- 唐津城 — mahlervv — CC BY 3.0 — https://commons.wikimedia.org/wiki/File:%E5%94%90%E6%B4%A5%E5%9F%8E_-_panoramio.jpg
-- 垂水市 — ja:User:Sanjo — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Kaigata_Tarumizu_City_Kagoshima_Japan_2015.JPG
-- 多比良駅 — そらみみ — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Tairamachi_Station_20170106.jpg
+- 折尾駅 — にのへ — CC BY 4.0 — https://commons.wikimedia.org/wiki/File:Orio_Station_20260826.jpg
+- 古月横穴 — Muyo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Furutsuki_Yokoana.jpg
+- 脇田温泉 — 水だらけのプール — CC0 — https://commons.wikimedia.org/wiki/File:Wakita_Onsen_20260628_01.jpg
+- 旧伊藤伝右衛門邸 — Usiwakamaru — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Old_Ito_Den-emon_Residence_4.JPG
+- 桂川駅 (福岡県) — Muyo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:JRKyushu_Keisen_station_2021-01.jpg
+- 筑前山家駅 — そらみみ — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:View_of_Chikuzen-Yamae_Station.jpg
 - 筑前町立大刀洗平和記念館 — そらみみ — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Chikuzen_Town_Tachiarai_Peace_Memorial_Museum_20180421-3.jpg
-- 大分駅 — 大分帰省中 — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Oita_sta_funai_2015.JPG
-- 大崎町 — Saigen Jiro — CC0 — https://commons.wikimedia.org/wiki/File:Yokose_Kofun,_zenkei-2.jpg
-- 大村公園 — ja:User:Sanjo — Public domain — https://commons.wikimedia.org/wiki/File:Omura_Park_(Nagasaki)_01.jpg
-- 大濠公園 — Tzuhsun Hsu from Taipei, Taiwan — CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E6%BF%A0%E5%85%AC%E5%9C%92_(3359545709).jpg
+- 甘木公園 — 水だらけのプール — CC0 — https://commons.wikimedia.org/wiki/File:Amagi_Park_02.jpg
+- 秋月城 — STA3816 — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Akizuki_Castle_Nagayamon.jpg
+- 菱野の三連水車 — 切干大根 — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Hishino_Three_Water_wheels_2018.jpg
+- 田主丸駅 — Bakkai at Japanese Wikipedia — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Tanushimaru_Station.JPG
+- 筑後吉井の白壁の町並み — 663highland — CC BY 2.5 — https://commons.wikimedia.org/wiki/File:Chikugo-Yoshii04s5s3200.jpg
+- 原鶴温泉 — Nissy-KITAQ — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Harazuru_Onsen.JPG
+- 豆田町 — Miya.m — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Hita-city_Mameda01.jpg
 - 大鶴駅 — KXT2 — CC0 — https://commons.wikimedia.org/wiki/File:Hitahikosan_Line_BRT_Otsuru_station_for_Hita.jpg
-- 天文館 — ja:User:Sanjo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Centerrace_Tenmonkan_Aug_2022.jpg
-- 天領日田資料館 — そらみみ — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Hita_Tenryo_Museum_20161231.jpg
-- 宇佐神宮 — ja:User:Sanjo — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Usa_Shrine_Nanchu_Romon.JPG
-- 宇土城 — Saigen Jiro — CC0 — https://commons.wikimedia.org/wiki/File:Uto_Castle_(Kinsei),_honmaru.jpg
-- 宇島駅 — PekePON — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Unoshima_Station_2007-2.jpg
-- 宗像大社 — Saigen Jiro — CC0 — https://commons.wikimedia.org/wiki/File:Munakata-taisha,_shaden.JPG
-- 宗太郎駅 — にっしーーー — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Sotaro_station_view_for_Saiki.jpg
 - 宝珠山駅 — Katayokusan — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Hitahikosan_Line_BRT_Hoshuyama_Station_after_renewal.jpg
+- 小石原焼伝統産業会館 — STA3816 — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Traditional_Industry_Hall_of_Koishiwara_Pottery.jpg
+- 添田駅 — ブルーノ・プラス — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Relationship_between_Soeda_Station_platform_and_BRT.jpg
+- 石炭記念公園 — M-MIX — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Mitsui-Tagawa_coal_mine_Chimney.jpg
+- 金田駅 — The original uploader was おんさか at Japanese Wikipedia. — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Kanada_Station.JPG
+- 直方駅 — KitaQ-UNIX — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:20170218_Nogata_Station.jpg
+- 遠賀川水源地ポンプ室 — そらみみ (Soramimi) — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Ongagawa_Source_Pump_Station_20160618-3.jpg
+- 芦屋町 — 水だらけのプール — CC0 — https://commons.wikimedia.org/wiki/File:Ashiya_Beach_Park_02.jpg
+- 三里松原海岸 — 水だらけのプール — CC0 — https://commons.wikimedia.org/wiki/File:Sanri_Matsubara_Coast_and_Cycling_Road.jpg
+- 宗像大社 — Saigen Jiro — CC0 — https://commons.wikimedia.org/wiki/File:Munakata-taisha,_shaden.JPG
 - 宮地嶽神社 — そらみみ — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Haiden_of_Miyajidake_Shrine.JPG
-- 宮崎神宮 — 京浜にけ — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Miyazaki_Miyazaki-jingu_Haiden_1.JPG
-- 宮崎駅 — Peachkk — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:%E5%AE%AE%E5%B4%8E%E9%A7%85%E5%89%8D.jpg
-- 宮若市 — 水だらけのプール — CC0 — https://commons.wikimedia.org/wiki/File:Wakita_Onsen_20260628_01.jpg
-- 小倉城 — Keramahani — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Kokura-jo-teien.jpg
-- 小石原村 — STA3816 — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Traditional_Industry_Hall_of_Koishiwara_Pottery.jpg
-- 岡垣町 — 水だらけのプール — CC0 — https://commons.wikimedia.org/wiki/File:Sanri_Matsubara_Coast_and_Cycling_Road.jpg
+- 大濠公園 — Tzuhsun Hsu from Taipei, Taiwan — CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E6%BF%A0%E5%85%AC%E5%9C%92_(3359545709).jpg
+- 二見ヶ浦 (福岡県) — そらみみ (Soramimi) — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Futamigaura_Beach_from_observation_deck_of_Futamigaura_Cemetery_1.JPG
+- 筑前深江駅 — Muyo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:JRKyushu_Chikuzenfukae_station05.jpg
+- 唐津城 — mahlervv — CC BY 3.0 — https://commons.wikimedia.org/wiki/File:%E5%94%90%E6%B4%A5%E5%9F%8E_-_panoramio.jpg
+- 大川内山 — Akiyoshi's Room — Public domain — https://commons.wikimedia.org/wiki/File:Nabeshimayaki_Okawachiyama_Imari-shi_Saga-ken_PB110126.jpg
+- 有田駅周辺 — そらみみ — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:View_of_Arita_Station.jpg
+- 九十九島 — Atsasebo — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Kitakujyukushima_from_nagushiyama.jpg
+- 早岐駅 — Atsasebo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:HaikiStation_EastGate.jpg
+- 彼杵駅 — popculture — Public domain — https://commons.wikimedia.org/wiki/File:Sonogi_Sta.JPG
+- 大村公園 — ja:User:Sanjo — Public domain — https://commons.wikimedia.org/wiki/File:Omura_Park_(Nagasaki)_01.jpg
+- 諫早公園 — 663highland — CC BY 2.5 — https://commons.wikimedia.org/wiki/File:140322_Isahaya_Park_Isahaya_Nagasaki_pref_Japan01o.JPG
+- 出島 — STA3816 — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Dejima.jpg
+- 愛野駅 (長崎県) — Marine-Blue — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Shimabara_Railway_Aino_Station_01.JPG
+- 多比良駅 — そらみみ — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Tairamachi_Station_20170106.jpg
 - 島原城 — 663highland — CC BY 2.5 — https://commons.wikimedia.org/wiki/File:140321_Shimabara_Castle_Shimabara_Nagasaki_pref_Japan01bs5.jpg
 - 島原港 — ぱちょぴ（投稿者）撮影 — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Shimabara-gaiko_terminal.jpg
-- 川内駅 (鹿児島県) — Sakoppi — CC BY 3.0 — https://commons.wikimedia.org/wiki/File:JR_Kyushu_Sendai_Station_East_Entrance.JPG
-- 延岡城 — Sengoku40 — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Nobeoka_castle_ishigaki1.JPG
-- 彼杵駅 — popculture — Public domain — https://commons.wikimedia.org/wiki/File:Sonogi_Sta.JPG
-- 志布志駅 — ja:User:Sanjo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Shibushi_Station_April_2018_02.JPG
-- 愛野駅 (長崎県) — Marine-Blue — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Shimabara_Railway_Aino_Station_01.JPG
-- 折尾駅 — にのへ — CC BY 4.0 — https://commons.wikimedia.org/wiki/File:Orio_Station_20260826.jpg
-- 日出城 — Heartoftheworld — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Hiji_Castle_ruins_inscription.jpg
-- 日南市 — JKT-c — CC BY 3.0 — https://commons.wikimedia.org/wiki/File:Udo-jingu_Shrine.jpg
-- 日田市 — Mukai — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Gionn_Festival_Hita_Ooita.jpg
-- 日田駅 — そらみみ — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Hita_Station_20161231.jpg
-- 旧伊藤伝右衛門邸 — Usiwakamaru — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Old_Ito_Den-emon_Residence_4.JPG
-- 早岐駅 — Atsasebo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:HaikiStation_EastGate.jpg
-- 有村町 — Sakoppi — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Sakurajima_View_From_Arimura_Lava_Lookout_2021-2.jpg
-- 有田町 — そらみみ — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:View_of_Arita_Station.jpg
-- 朝倉市 — 切干大根 — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Hishino_Three_Water_wheels_2018.jpg
-- 桂川駅 (福岡県) — Muyo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:JRKyushu_Keisen_station_2021-01.jpg
-- 桜の馬場 城彩苑 — Jdjuice — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Johsaien_57T3202small.jpg
-- 二見ヶ浦 (福岡県) — そらみみ (Soramimi) — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Futamigaura_Beach_from_observation_deck_of_Futamigaura_Cemetery_1.JPG
-- 桜島 — Christophe95 — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:View_of_Sakurajima_from_the_ferry.jpg
-- 桜島港 — Christophe95 — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:View_of_Sakurajima_from_the_ferry.jpg
-- 津久見駅 — Hajime NAKANO from Tokyo, Japan — CC BY 2.0 — https://commons.wikimedia.org/wiki/File:%E6%B4%A5%E4%B9%85%E8%A6%8B%E9%A7%85_(48460859246).jpg
-- 添田駅 — ブルーノ・プラス — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Relationship_between_Soeda_Station_platform_and_BRT.jpg
+- 熊本港フェリーターミナル — MK Products — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Kumamoto-Port_ferry_terminal_1.jpg
 - 熊本城 — Suicasmo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Kumamoto_Castle_Keep_Tower_20221022-3.jpg
-- 熊本市現代美術館 — 663highland — CC BY 2.5 — https://commons.wikimedia.org/wiki/File:Bipuresu_kumanichi-kaikan01s3200.jpg
-- 熊本港 — Gazouya-japan — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Container_%E3%80%90_42P3_%E3%80%91_TRIU_044668(0)---No,1_%E3%80%90_Pictures_taken_in_Japan_%E3%80%91.jpg
-- 甘木公園 — 水だらけのプール — CC0 — https://commons.wikimedia.org/wiki/File:Amagi_Park_02.jpg
-- 田主丸駅 — Bakkai at Japanese Wikipedia — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Tanushimaru_Station.JPG
-- 直川駅 — はづき裕一 (Hazuyu1 at Japanese Wikipedia) — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Naokawa_Station.JPG
-- 直方駅 — KitaQ-UNIX — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:20170218_Nogata_Station.jpg
-- 石炭記念公園 — M-MIX — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Mitsui-Tagawa_coal_mine_Chimney.jpg
-- 秋月城 — STA3816 — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Akizuki_Castle_Nagayamon.jpg
-- 竹原古墳 — 水だらけのプール — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Takehara_kofun_04.jpg
-- 竹瓦温泉 — 大分帰省中 — CC BY 3.0 — https://commons.wikimedia.org/wiki/File:Beppu_Takegawara_Onsen_1.jpg
-- 筑前山家駅 — そらみみ — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:View_of_Chikuzen-Yamae_Station.jpg
-- 筑前深江駅 — Muyo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:JRKyushu_Chikuzenfukae_station05.jpg
-- 美々津 — ja:User:Sanjo — Public domain — https://commons.wikimedia.org/wiki/File:Mimitsu_Hyuga_2008.JPG
-- 臼杵市 — Si-take. — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Buddhism_statue_of_USUKI_(Furuzono)_Oita,JAPAN.JPG
-- 芦北町 — JoshBerglund19 — CC BY 2.0 — https://commons.wikimedia.org/wiki/File:Ashikita_Seaside_Park_2_-_Aug_31,_2008.jpg
-- 芦屋町 — 水だらけのプール — CC0 — https://commons.wikimedia.org/wiki/File:Ashiya_Beach_Park_02.jpg
-- 苅田駅 — Uploaded to Wikipedia on 21 August 2007 by UE-PON2600 and upload to commons on 27 October 2010 by STA3816. — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Kanda(Fukuoka)_station_east_entrance.jpg
-- 若戸大橋 — Original uploader was UE-PON2600 at ja.wikipedia — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Wakato_Narrows_Bridge2.jpg
-- 行橋駅 — Niiryoku2910 — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Yukuhashi_station_west_side_building.jpg
-- 諫早公園 — 663highland — CC BY 2.5 — https://commons.wikimedia.org/wiki/File:140322_Isahaya_Park_Isahaya_Nagasaki_pref_Japan01o.JPG
-- 豆田町 — Miya.m — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Hita-city_Mameda01.jpg
-- 遠賀川水源地ポンプ室 — そらみみ (Soramimi) — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Ongagawa_Source_Pump_Station_20160618-3.jpg
-- 都農神社 — Saigen Jiro — CC0 — https://commons.wikimedia.org/wiki/File:Tsuno-jinja_keidai.JPG
-- 金田駅 — The original uploader was おんさか at Japanese Wikipedia. — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Kanada_Station.JPG
+- 宇土城 — Saigen Jiro — CC0 — https://commons.wikimedia.org/wiki/File:Uto_Castle_(Kinsei),_honmaru.jpg
+- 八代城 — The original uploader was Kumamoto taro at Japanese Wikipedia. — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Yatsushiro_castle.JPG
+- 芦北海浜総合公園 — JoshBerglund19 — CC BY 2.0 — https://commons.wikimedia.org/wiki/File:Ashikita_Seaside_Park_2_-_Aug_31,_2008.jpg
+- エコパーク水俣のバラ園 — hyolee2 — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Minamata_Rose_Park1.JPG
+- 出水麓武家屋敷群 — Asturio Cantabrio — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Izumi-Fumoto_Tatebaba_ac_(1).jpg
 - 阿久根駅 — Kzaral — CC BY 2.0 — https://commons.wikimedia.org/wiki/File:%E9%98%BF%E4%B9%85%E6%A0%B9%E9%A7%85_Akune_Station,_Hisatsu_Orange_Railway.jpg
-- 青島神社 — Naokijp — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Aoshima_jinja,_Worship_Hall_01.jpg
-- 鞍手町 — Muyo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Furutsuki_Yokoana.jpg
-- 高鍋町 — 原田純児 — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:%E9%AB%98%E9%8D%8B%E5%A4%A7%E5%B8%AB_%E5%8D%81%E4%B8%80%E9%9D%A2%E8%A6%B3%E9%9F%B3_2019-05-15.jpg
-- 鵜戸神宮 — JKT-c — CC BY 3.0 — https://commons.wikimedia.org/wiki/File:Udo-jingu_Shrine.jpg
-- 鹿児島港 — こたつむり from Hokkaidō, Japan. — CC BY-SA 2.1 jp — https://commons.wikimedia.org/wiki/File:Sakurajima_-%E5%9F%8E%E5%B1%B1%E5%B1%95%E6%9C%9B%E5%8F%B0%E3%82%88%E3%82%8A.jpg
+- 川内駅 (鹿児島県) — Sakoppi — CC BY 3.0 — https://commons.wikimedia.org/wiki/File:JR_Kyushu_Sendai_Station_East_Entrance.JPG
+- 串木野駅 — Junpei5885 — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Kushikino_Station1.jpg
+- 伊集院駅 — Suikotei — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Ij%C5%ABin_Station_Southside_20180503.jpg
+- 天文館 — ja:User:Sanjo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Centerrace_Tenmonkan_Aug_2022.jpg
+- 城山から望む鹿児島市街と桜島 — こたつむり from Hokkaidō, Japan. — CC BY-SA 2.1 jp — https://commons.wikimedia.org/wiki/File:Sakurajima_-%E5%9F%8E%E5%B1%B1%E5%B1%95%E6%9C%9B%E5%8F%B0%E3%82%88%E3%82%8A.jpg
+- 桜島（フェリーからの眺め） — Christophe95 — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:View_of_Sakurajima_from_the_ferry.jpg
+- 有村町 — Sakoppi — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Sakurajima_View_From_Arimura_Lava_Lookout_2021-2.jpg
+- 黒神埋没鳥居 — そらみみ — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Buried_torii_near_Kurokami-Cho,_Kagoshima.JPG
+- 海潟と桜島 — ja:User:Sanjo — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Kaigata_Tarumizu_City_Kagoshima_Japan_2015.JPG
 - 鹿屋市 — Sanjo — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Kanoya_Montage_Beta.jpg
+- 大崎町 — Saigen Jiro — CC0 — https://commons.wikimedia.org/wiki/File:Yokose_Kofun,_zenkei-2.jpg
+- 志布志駅 — ja:User:Sanjo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Shibushi_Station_April_2018_02.JPG
+- 串間駅 — ja:User:Sanjo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:JR_Kushima_Station_2023.jpg
+- 南郷駅 — Tokyo-Good — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Nango-station-building2020.jpg
+- 鵜戸神宮 — JKT-c — CC BY 3.0 — https://commons.wikimedia.org/wiki/File:Udo-jingu_Shrine.jpg
+- 青島神社 — Naokijp — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Aoshima_jinja,_Worship_Hall_01.jpg
+- 宮崎神宮 — 京浜にけ — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Miyazaki_Miyazaki-jingu_Haiden_1.JPG
+- 高鍋大師 — 原田純児 — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:%E9%AB%98%E9%8D%8B%E5%A4%A7%E5%B8%AB_%E5%8D%81%E4%B8%80%E9%9D%A2%E8%A6%B3%E9%9F%B3_2019-05-15.jpg
+- 都農神社 — Saigen Jiro — CC0 — https://commons.wikimedia.org/wiki/File:Tsuno-jinja_keidai.JPG
+- 美々津 — ja:User:Sanjo — Public domain — https://commons.wikimedia.org/wiki/File:Mimitsu_Hyuga_2008.JPG
+- 延岡城 — Sengoku40 — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Nobeoka_castle_ishigaki1.JPG
+- 北川駅 — kuromaster — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:JR_Kyushu_Kitagawa_station.jpg
+- 宗太郎駅 — にっしーーー — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Sotaro_station_view_for_Saiki.jpg
+- 直川駅 — はづき裕一 (Hazuyu1 at Japanese Wikipedia) — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Naokawa_Station.JPG
+- 佐伯城 — Mukai — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Saiki_castle_05.jpg
+- 津久見駅 — Hajime NAKANO from Tokyo, Japan — CC BY 2.0 — https://commons.wikimedia.org/wiki/File:%E6%B4%A5%E4%B9%85%E8%A6%8B%E9%A7%85_(48460859246).jpg
+- 臼杵石仏 — Si-take. — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Buddhism_statue_of_USUKI_(Furuzono)_Oita,JAPAN.JPG
+- 大分駅 — 大分帰省中 — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Oita_sta_funai_2015.JPG
+- 竹瓦温泉 — 大分帰省中 — CC BY 3.0 — https://commons.wikimedia.org/wiki/File:Beppu_Takegawara_Onsen_1.jpg
+- 日出城 — Heartoftheworld — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Hiji_Castle_ruins_inscription.jpg
+- 宇佐神宮 — ja:User:Sanjo — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Usa_Shrine_Nanchu_Romon.JPG
+- 中津城 — Suicasmo — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Nakatsu_Castle_20221023-2.jpg
+- 宇島駅 — PekePON — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Unoshima_Station_2007-2.jpg
+- 行橋駅 — Niiryoku2910 — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Yukuhashi_station_west_side_building.jpg
+- 苅田駅 — Uploaded to Wikipedia on 21 August 2007 by UE-PON2600 and upload to commons on 27 October 2010 by STA3816. — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Kanda(Fukuoka)_station_east_entrance.jpg
+- 小倉城庭園 — Keramahani — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Kokura-jo-teien.jpg
+- 若戸大橋 — Original uploader was UE-PON2600 at ja.wikipedia — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Wakato_Narrows_Bridge2.jpg
 - 黒崎駅 — そらみみ — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Kurosaki_Station_20180408.jpg
-- 腹五社神社 — そらみみ — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Honden_of_Haragosha_Shrine.JPG
+- 天領日田資料館 — そらみみ — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Hita_Tenryo_Museum_20161231.jpg
+- 日田駅 — そらみみ — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Hita_Station_20161231.jpg
+- 桜の馬場 城彩苑 — Jdjuice — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Johsaien_57T3202small.jpg
+- 熊本市現代美術館 — 663highland — CC BY 2.5 — https://commons.wikimedia.org/wiki/File:Bipuresu_kumanichi-kaikan01s3200.jpg
+- 宮崎科学技術館の屋外ロケット展示 — user:masamic — CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:H-I-FullScaledModel-20090827.jpg
+- 宮崎駅 — Peachkk — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:%E5%AE%AE%E5%B4%8E%E9%A7%85%E5%89%8D.jpg
+- 竹原古墳 — 水だらけのプール — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Takehara_kofun_04.jpg
+- 九十九島パールシーリゾート — 663highland — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:200320_Kujukushima_Pearl_Sea_Resort_Sasebo_Nagasaki_pref_Japan10s3.jpg
