@@ -6,6 +6,7 @@ on:
       - '.github/workflows/verify-site.yml'
       - 'assets/guide-enhancements.js'
       - 'scripts/test_site.py'
+      - 'scripts/test_dialog_size.py'
       - 'maintenance/verify_live.py'
   workflow_run:
     workflows: ['pages build and deployment']
@@ -19,7 +20,7 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
@@ -32,6 +33,10 @@ jobs:
         run: python -u scripts/test_site.py
       - name: Verify live HTTPS files, photographs, and rest-day navigation
         run: python -u maintenance/verify_live.py
+      - name: Verify user resizing and saved preferences on the live site
+        env:
+          SITE_URL: https://25d-228.github.io/kyushu-cycle-guide/
+        run: python -u scripts/test_dialog_size.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -39,6 +44,8 @@ jobs:
           path: |
             live-verification.json
             browser-test-report.json
+            dialog-size-test-report.json
+            resizable-*.png
             live-*.png
             test-*.png
           retention-days: 7
