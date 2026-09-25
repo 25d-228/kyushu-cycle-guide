@@ -1,4 +1,4 @@
-"""Browser smoke tests for the existing navigator and its photo galleries."""
+"""Browser smoke tests for the navigator, photo galleries, and centered dialogs."""
 import json, subprocess, time
 from pathlib import Path
 from playwright.sync_api import sync_playwright
@@ -42,9 +42,42 @@ try:
         assert page.evaluate('document.documentElement.scrollWidth <= innerWidth+1')
         assert page.evaluate('document.getElementById("destinationDialog").getBoundingClientRect().width <= innerWidth+1')
         page.screenshot(path=str(ROOT/'test-mobile.png'))
+        page.evaluate('closeDestination()')
+        dialog_layouts=[]
+        for width,height in [(1440,1000),(1920,1080),(1024,768),(768,1024),(390,844),(320,568),(844,390)]:
+            page.set_viewport_size({'width':width,'height':height})
+            for city,mode in [('熊本','main'),('日田','small'),('宮崎','main')]:
+                page.evaluate('([city,mode])=>openPlace(city,mode,"rest")',[city,mode])
+                page.wait_for_timeout(100)
+                metrics=page.evaluate('''()=>{
+                    const dialog=document.getElementById('destinationDialog');
+                    const body=document.getElementById('dialogBody');
+                    const r=dialog.getBoundingClientRect();
+                    return {x:r.x,y:r.y,width:r.width,height:r.height,
+                        centerErrorX:Math.abs(r.x+r.width/2-innerWidth/2),
+                        centerErrorY:Math.abs(r.y+r.height/2-innerHeight/2),
+                        bodyHeight:body.clientHeight,bodyWidth:body.clientWidth,
+                        scrollWidth:body.scrollWidth};
+                }''')
+                assert metrics['centerErrorX']<2 and metrics['centerErrorY']<2,(city,metrics)
+                assert metrics['width']<=width-16 and metrics['height']<=height-16,metrics
+                assert metrics['bodyHeight']>=90,metrics
+                assert metrics['scrollWidth']<=metrics['bodyWidth']+1,metrics
+                if width>=1200:assert metrics['width']==1120,metrics
+                for tab in ['#sightTab','#hotelTab','#restTab']:
+                    page.locator(tab).click()
+                    assert page.locator('#destinationDialog').is_visible()
+                page.evaluate('document.getElementById("dialogBody").scrollTop=200')
+                assert page.evaluate('document.getElementById("dialogBody").scrollTop')>0
+                page.locator('#closeDestination').click()
+                assert not page.locator('#destinationDialog').is_visible()
+                dialog_layouts.append({'viewport':[width,height],'city':city,**metrics})
+        page.evaluate('openPlace("唐津","main","sights")')
+        page.keyboard.press('Escape')
+        assert not page.locator('#destinationDialog').is_visible()
         assert not errors,errors
         browser.close()
-    report={'waypointsWithPhotos':len(manifest['places']),'navigationPositionsTested':len(positions),'restDayGalleries':{k:len(v) for k,v in manifest['rest'].items()},'pageErrors':errors,'mobileLayout':'passed'}
+    report={'waypointsWithPhotos':len(manifest['places']),'navigationPositionsTested':len(positions),'restDayGalleries':{k:len(v) for k,v in manifest['rest'].items()},'pageErrors':errors,'mobileLayout':'passed','centeredDialogLayouts':dialog_layouts}
     (ROOT/'browser-test-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
     print(json.dumps(report,ensure_ascii=False),flush=True)
 finally:
