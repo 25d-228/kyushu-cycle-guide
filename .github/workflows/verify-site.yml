@@ -24,7 +24,7 @@ jobs:
         run: |
           python -m pip install Pillow playwright
           python -m playwright install chromium --with-deps
-      - name: Test every waypoint and mobile layout in the publishing source
+      - name: Test waypoint navigation, centered dialogs, and seven screen sizes
         run: python -u scripts/test_site.py
       - name: Verify live HTTPS files, photographs, and rest-day navigation
         run: python -u maintenance/verify_live.py
@@ -36,4 +36,5 @@ jobs:
             live-verification.json
             browser-test-report.json
             live-*.png
+            test-*.png
           retention-days: 7
