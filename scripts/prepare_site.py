@@ -21,9 +21,23 @@ def get(url, binary=False):
             time.sleep(2+attempt*3)
 
 def api(endpoint, **params):
-    value=get(endpoint+'?'+urllib.parse.urlencode({'format':'json','formatversion':2,'action':'query',**params}))
-    if 'error' in value: raise RuntimeError(str(value['error']))
-    return value.get('query',{})
+    pages={}; result={}; continuation={}
+    for batch in range(40):
+        value=get(endpoint+'?'+urllib.parse.urlencode({'format':'json','formatversion':2,'action':'query',**params,**continuation}))
+        if 'error' in value: raise RuntimeError(str(value['error']))
+        q=value.get('query',{})
+        for key in ['normalized','redirects']:
+            result.setdefault(key,[]).extend(q.get(key,[]))
+        for page in q.get('pages',[]):
+            key=page.get('pageid',page['title'])
+            old=pages.setdefault(key,{})
+            for field,item in page.items():
+                if field=='images':old.setdefault(field,[]).extend(item)
+                else:old[field]=item
+        if 'images' not in params.get('prop','').split('|') or not value.get('continue'):break
+        continuation=value['continue']
+    result['pages']=list(pages.values())
+    return result
 
 def text(value): return html.unescape(re.sub('<[^>]+>','',value or '')).strip()
 
@@ -34,7 +48,7 @@ CANDIDATES='''折尾|折尾駅
 宮若|宮若市|竹原古墳
 飯塚|旧伊藤伝右衛門邸|飯塚市
 桂川|桂川駅 (福岡県)|桂川町 (福岡県)
-冷水峠|冷水峠
+冷水峠|冷水峠|筑前山家駅
 筑前|大刀洗平和記念館|筑前町
 甘木|甘木公園|甘木駅|朝倉市
 秋月|秋月城|秋月
@@ -45,7 +59,7 @@ CANDIDATES='''折尾|折尾駅
 日田|豆田町|日田市
 大鶴|大鶴駅
 宝珠山|宝珠山駅|東峰村
-小石原|小石原焼|小石原村|東峰村
+小石原|小石原村|東峰村|小石原焼
 添田|添田公園|添田駅|添田町
 田川|石炭記念公園|田川市
 福智|金田駅|福智町
@@ -59,7 +73,7 @@ CANDIDATES='''折尾|折尾駅
 糸島|二見ヶ浦 (糸島市)|桜井二見ヶ浦|糸島市
 二丈|筑前深江駅|二丈町
 唐津|唐津城
-伊万里|大川内山|伊万里市
+伊万里|伊万里市
 有田|有田町
 佐世保|九十九島 (西海国立公園)|佐世保市
 早岐|早岐駅
@@ -120,7 +134,7 @@ CANDIDATES='''折尾|折尾駅
 戸畑|若戸大橋|戸畑駅
 黒崎|黒崎駅'''
 places={row.split('|')[0]:row.split('|')[1:] for row in CANDIDATES.splitlines()}
-rest={'日田':['豆田町','天領日田資料館','日田市'],'熊本':['熊本城','桜の馬場 城彩苑','熊本市現代美術館'],'宮崎':['宮崎神宮','宮崎科学技術館','宮崎駅']}
+rest={'日田':['豆田町','天領日田資料館','日田市','日田駅'],'熊本':['熊本城','桜の馬場 城彩苑','熊本市現代美術館'],'宮崎':['宮崎神宮','宮崎科学技術館','宮崎駅']}
 sight_titles={'s01':['鞍手町歴史民俗博物館'],'s02':['竹原古墳'],'s03':['旧伊藤伝右衛門邸']}
 source=(ROOT/'index.html').read_text()
 
@@ -136,7 +150,7 @@ for city,p in TRAVEL['places'].items():
 all_titles=list(dict.fromkeys(t for group in [*places.values(),*rest.values(),*sight_titles.values()] for t in group))
 articles={}; normalized={}
 for start in range(0,len(all_titles),20):
-    q=api(WP,titles='|'.join(all_titles[start:start+20]),redirects=1,prop='pageimages|images',piprop='name',imlimit=8)
+    q=api(WP,titles='|'.join(all_titles[start:start+20]),redirects=1,prop='pageimages|images',piprop='name',pilimit=50,imlimit=500)
     for mapping in q.get('normalized',[])+q.get('redirects',[]): normalized[mapping['from']]=mapping['to']
     for page in q.get('pages',[]):
         if 'missing' not in page: articles[page['title']]=page
@@ -148,13 +162,15 @@ def article(title):
     return articles.get(title)
 
 def usable_name(name):
-    return bool(re.search(r'\.jpe?g$',name,re.I)) and not re.search(r'flag|logo|map\b|locator|seal|symbol|emblem|portrait|painting|drawing|紋章|位置図|地図|路線図|空中写真',name,re.I)
+    return bool(re.search(r'\.jpe?g$',name,re.I)) and not re.search(r'flag|logo|map\b|locator|seal|symbol|emblem|portrait|painting|drawing|紋章|位置図|地図|路線図|空中写真|Himeji|Hiroshige|Plattegrond|Kato-Kiyomasa|Blomhoff|Landsat|model|模型|裁断屑|JapanHomes|Miss Shanshan|aerial|空撮',name,re.I)
 
+PHOTO_FILES={'出島': ['Dejima.jpg'], '天領日田資料館': ['Hita Tenryo Museum 20161231.jpg'], '桜島': ['View of Sakurajima from the ferry.jpg'], '鵜戸神宮': ['Udo-jingu Shrine.jpg'], '宇土城': ['Uto Castle (Kinsei), honmaru.jpg'], '延岡城': ['Nobeoka castle ishigaki1.JPG'], '中津城': ['Nakatsu Castle 20221023-2.jpg'], '旧伊藤伝右衛門邸': ['Old Ito Den-emon Residence 4.JPG']}
 def file_candidates(title):
+    if title in PHOTO_FILES:return PHOTO_FILES[title]
     p=article(title)
     if not p:return []
     names=([p['pageimage']] if p.get('pageimage') else [])+[i['title'].removeprefix('File:').removeprefix('ファイル:') for i in p.get('images',[])]
-    return list(dict.fromkeys(n for n in names if usable_name(n)))[:3]
+    return list(dict.fromkeys(n.replace('_',' ') for n in names if usable_name(n)))[:3]
 
 files=list(dict.fromkeys(n for t in all_titles for n in file_candidates(t)))
 infos={}
@@ -164,6 +180,7 @@ for start in range(0,len(files),8):
         if p.get('imageinfo'):infos[p['title'].removeprefix('File:')]=p['imageinfo'][0]
     time.sleep(.15)
 
+(OUT/'import-debug.json').write_text(json.dumps({'articles':articles,'infos':infos},ensure_ascii=False))
 resolved={}; downloaded={}
 
 def photo(title):
@@ -177,15 +194,20 @@ def photo(title):
         if not re.search(r'CC BY|CC0|Public domain|PD-|PDM',licence,re.I):continue
         author=text(meta.get('Artist',{}).get('value',''))
         if not author:author=text(meta.get('Credit',{}).get('value',''))
-        if not author:continue
-        url=info.get('thumburl') or info.get('url','')
-        if not url.startswith('https://upload.wikimedia.org/'):continue
+        if not author:
+            print('SKIP_NO_AUTHOR',name,str(meta)[:700],flush=True);continue
+        urls=[info.get('thumburl',''),info.get('url','')]
+        urls=['https:'+u if u.startswith('//') else u for u in urls]
+        url=next((u for u in urls if u.startswith('https://upload.wikimedia.org/')),'')
+        if not url:
+            print('SKIP_URL',name,urls,flush=True);continue
         digest=hashlib.sha256(name.encode()).hexdigest()[:18]
         path=OUT/(digest+'.jpg')
         try:
             if name not in downloaded:
                 image=ImageOps.exif_transpose(Image.open(io.BytesIO(get(url,binary=True)))).convert('RGB')
-                if min(image.size)<100:continue
+                if min(image.size)<100:
+                    print('SKIP_DIMENSIONS',name,image.size,url,flush=True);continue
                 image.thumbnail((960,720));image.save(path,quality=84,optimize=True)
                 downloaded[name]=image.size
             width,height=downloaded[name]
@@ -267,7 +289,7 @@ pairs={
 '小さい旅で装備と回復を試してから、<br>別のルートで本番へ。':'短い旅で装備や疲れの残り方を確かめてから、<br>別のルートで九州一周へ。',
 '走る場所を、分けて楽しむ。':'試走と本番、それぞれの景色を楽しむ。',
 '試走は内陸、本番は外周寄り。':'試走は内陸を、本番は海沿いを中心に。',
-'泊地':'宿泊地','前の地名':'前の地点','次の地名':'次の地点',
+'前の地名':'前の地点','次の地名':'次の地点',
 '走行は0km。':'自転車での移動はありません。',
 '移動しない日':'自転車に乗らずに休む日',
 '日田で連泊し、走行は0km。豆田町と昼食を楽しみ、午後は宿で休む案。':'日田で連泊し、自転車には乗らずに過ごします。午前は豆田町の散策と昼食を楽しみ、午後は宿で休む案です。',
@@ -321,6 +343,7 @@ for city,p in REST['cities'].items():
 for name,obj in [('DATA',DATA),('TRAVEL',TRAVEL),('REST',REST)]:
     _,start,end=extract(name);source=source[:start]+json.dumps(rewrite(obj),ensure_ascii=False,separators=(',',':'))+source[end:]
 for old,new in sorted(pairs.items(),key=lambda x:-len(x[0])):source=source.replace(old,new)
+source=re.sub(r'(?<!宿)泊地','宿泊地',source)
 source=re.sub(r'\n?<!-- photo-guide-assets -->.*?<!-- /photo-guide-assets -->','',source,flags=re.S)
 assets='\n<!-- photo-guide-assets -->\n<script src="assets/photos/data.js"></script>\n<script src="assets/guide-enhancements.js"></script>\n<!-- /photo-guide-assets -->\n'
 assert '</body>' in source

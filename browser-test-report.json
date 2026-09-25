@@ -1,0 +1,11 @@
+{
+  "waypointsWithPhotos": 92,
+  "navigationPositionsTested": 110,
+  "restDayGalleries": {
+    "日田": 4,
+    "熊本": 3,
+    "宮崎": 2
+  },
+  "pageErrors": [],
+  "mobileLayout": "passed"
+}

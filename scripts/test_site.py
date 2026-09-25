@@ -33,6 +33,7 @@ try:
         assert page.evaluate('JourneyNavigator.getState().day')==6
         for city in ['日田','熊本','宮崎']:
             page.evaluate('(city)=>openPlace(city,city==="日田"?"small":"main","rest")',city)
+            page.locator('.journey-rest-gallery img').evaluate_all("images=>images.forEach(i=>i.loading='eager')")
             page.wait_for_function('Array.from(document.querySelectorAll(".journey-rest-gallery img")).every(i=>i.complete && i.naturalWidth>0)')
             page.screenshot(path=str(ROOT/('test-rest-'+city+'.png')))
             page.evaluate('closeDestination()')
