@@ -11,6 +11,100 @@
   .journey-place-cover{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:10px;margin:0 0 12px;background:#eef1e9}.journey-cover-caption{font-size:10px;color:#75816f;display:block;margin:-5px 0 10px}.journey-site-photo{margin:12px 0 16px}.journey-site-photo img{aspect-ratio:16/9}.journey-rest-gallery .journey-photo-grid>figure:first-child{grid-column:1/-1}.journey-rest-gallery .journey-photo-grid>figure:first-child img{aspect-ratio:16/8}.photo-date-note{font-size:10px;color:#74806d;line-height:1.7;margin:14px 0 0}
   @media(max-width:600px){.journey-photo-grid{gap:9px}.journey-photo figcaption{padding:9px}.journey-photo-credit{font-size:8px}.journey-photo strong{font-size:11px}.journey-gallery-note{font-size:10px}}
   @media print{.journey-gallery,.journey-site-photo,.journey-place-cover,.journey-cover-caption{display:none}}
+/* Centered, spacious place details; the body scrolls while controls stay visible. */
+@media screen {
+  #destinationDialog.destination-dialog {
+    position: fixed;
+    inset: 0;
+    width: min(1120px, calc(100vw - 64px));
+    max-width: calc(100vw - 64px);
+    height: calc(100vh - 56px);
+    height: calc(100dvh - 56px);
+    max-height: 1040px;
+    margin: auto;
+    border: 1px solid #e1e2d8;
+    border-radius: 22px;
+  }
+  #destinationDialog .dialog-shell-head { padding: 20px 32px 16px; }
+  #destinationDialog .dialog-title-row { padding-right: 44px; }
+  #destinationDialog .dialog-title-row h2 { font-size: 30px; }
+  #destinationDialog .dialog-close { width: 40px; height: 40px; top: 18px; right: 22px; }
+  #destinationDialog .dialog-tabs,
+  #destinationDialog .dialog-footer { padding-left: 32px; padding-right: 32px; }
+  #destinationDialog .dialog-body {
+    min-height: 0;
+    padding: 24px 32px 32px;
+    overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
+  #destinationDialog .journey-photo-grid.single img { max-height: 320px; aspect-ratio: 16 / 7; }
+}
+@media screen and (min-width: 960px) {
+  #destinationDialog .dialog-journey {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 290px;
+    gap: 9px 22px;
+    padding: 14px 32px;
+    align-items: center;
+  }
+  #destinationDialog .dialog-journey .journey-day-row { grid-column: 1; grid-row: 1; }
+  #destinationDialog .dialog-journey .journey-stop-row { grid-column: 1; grid-row: 2; }
+  #destinationDialog .dialog-journey .journey-rest-context { grid-column: 1; grid-row: 3; margin: 0; }
+  #destinationDialog .journey-mini-map {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    margin: 0;
+    height: 100%;
+    min-height: 102px;
+  }
+  #destinationDialog .journey-rest-gallery .journey-photo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #destinationDialog .journey-rest-gallery .journey-photo-grid > figure:first-child { grid-column: auto; }
+  #destinationDialog .journey-rest-gallery .journey-photo-grid > figure:first-child img { aspect-ratio: 4 / 3; }
+}
+@media screen and (max-width: 760px) {
+  #destinationDialog.destination-dialog {
+    width: calc(100vw - 24px);
+    max-width: calc(100vw - 24px);
+    height: calc(100vh - 24px);
+    height: calc(100dvh - 24px);
+    max-height: calc(100dvh - 24px);
+    margin: auto;
+    border-radius: 18px;
+  }
+  #destinationDialog .dialog-shell-head { padding: 14px 18px 10px; }
+  #destinationDialog .dialog-title-row h2 { font-size: 24px; }
+  #destinationDialog .dialog-close { width: 36px; height: 36px; top: 12px; right: 12px; }
+  #destinationDialog .dialog-tabs,
+  #destinationDialog .dialog-footer { padding-left: 16px; padding-right: 16px; }
+  #destinationDialog .dialog-body { padding: 18px 16px 24px; }
+  #destinationDialog .journey-photo-grid.single img { max-height: 260px; aspect-ratio: 16 / 9; }
+}
+@media screen and (max-height: 650px) {
+  #destinationDialog .dialog-shell-head { padding-top: 10px; padding-bottom: 8px; }
+  #destinationDialog .dialog-description,
+  #destinationDialog .dialog-pref { display: none; }
+}
+@media screen and (max-height: 500px) {
+  #destinationDialog.destination-dialog {
+    width: calc(100vw - 24px);
+    max-width: calc(100vw - 24px);
+    height: calc(100vh - 24px);
+    height: calc(100dvh - 24px);
+    max-height: calc(100dvh - 24px);
+  }
+  #destinationDialog .dialog-context { display: none; }
+  #destinationDialog .dialog-title-row h2 { font-size: 22px; }
+  #destinationDialog .dialog-shell-head { padding: 8px 18px; }
+  #destinationDialog .dialog-close { width: 32px; height: 32px; top: 5px; right: 12px; }
+  #destinationDialog .dialog-tabs button { padding-top: 8px; padding-bottom: 8px; }
+  #destinationDialog .dialog-footer { padding-top: 7px; padding-bottom: 7px; }
+  #destinationDialog .dialog-body { padding: 14px 20px; }
+  #destinationDialog .journey-mini-map { display: none; }
+  #destinationDialog .dialog-journey { display: block; padding-top: 8px; padding-bottom: 8px; }
+  #destinationDialog .dialog-journey .journey-stop-row { margin-top: 6px; }
+}
+
   `;
   document.head.append(css);
   const clean = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
