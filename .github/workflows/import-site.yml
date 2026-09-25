@@ -3,7 +3,7 @@ name: Import original website
 on:
   push:
     branches: [main]
-    paths: ['.bootstrap/site.br']
+    paths: ['.bootstrap/**']
   workflow_dispatch:
 
 permissions:
@@ -28,18 +28,21 @@ jobs:
           const fs = require('node:fs');
           const zlib = require('node:zlib');
           const crypto = require('node:crypto');
-          const archive = '.bootstrap/site.br';
-          if (!fs.existsSync(archive)) {
+          const archives = Array.from({length: 13}, (_, i) => `.bootstrap/site.br.${String(i + 1).padStart(2, '0')}`);
+          const present = archives.filter(path => fs.existsSync(path));
+          if (present.length === 0) {
             console.log('Original HTML has already been imported.');
             process.exit(0);
           }
-          const html = zlib.brotliDecompressSync(fs.readFileSync(archive));
+          if (present.length !== archives.length) throw new Error('Incomplete website archive.');
+          const compressed = Buffer.concat(archives.map(path => fs.readFileSync(path)));
+          const html = zlib.brotliDecompressSync(compressed);
           const expected = '8889ac622837eff6cb141d687f385397ead770b53f92c7c3d3beb38be4575013';
           const actual = crypto.createHash('sha256').update(html).digest('hex');
           if (actual !== expected) throw new Error(`HTML checksum mismatch: ${actual}`);
           fs.writeFileSync('index.html', html);
           fs.writeFileSync('.nojekyll', '');
-          fs.unlinkSync(archive);
+          archives.forEach(path => fs.unlinkSync(path));
           console.log(`Verified and restored ${html.length} bytes of the original website.`);
           NODE
       - name: Commit the verified website
@@ -47,7 +50,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add --all -- index.html .nojekyll .bootstrap
+          git add --all
           if git diff --cached --quiet; then
             echo 'No changes to import.'
           else
