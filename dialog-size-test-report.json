@@ -1,0 +1,256 @@
+{
+  "url": "http://127.0.0.1:8766/",
+  "tests": [
+    "larger default without 1120px cap",
+    "independent width and height controls and keyboard input",
+    "maximize and restore previous custom dimensions",
+    "pointer drag adjusts both dimensions and keeps popup centered",
+    "size persists through navigation, tabs, closing, and reload including maximize/restore",
+    "reset restores larger default",
+    "seven desktop tablet and mobile layouts, including landscape and expanded controls",
+    "resize handle keyboard shortcuts and Escape close",
+    "works when browser storage is disabled"
+  ],
+  "layouts": [
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "default": {
+        "x": 57.5,
+        "y": 32.5,
+        "width": 1805,
+        "height": 1015,
+        "viewportWidth": 1920,
+        "viewportHeight": 1080,
+        "centerX": 0,
+        "centerY": 0,
+        "bodyHeight": 420,
+        "bodyWidth": 1793,
+        "bodyScrollWidth": 1793,
+        "count": 1
+      },
+      "maximized": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "viewportWidth": 1920,
+        "viewportHeight": 1080,
+        "centerX": 0,
+        "centerY": 0,
+        "bodyHeight": 485,
+        "bodyWidth": 1908,
+        "bodyScrollWidth": 1908,
+        "count": 1
+      }
+    },
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "default": {
+        "x": 43,
+        "y": 30,
+        "width": 1354,
+        "height": 940,
+        "viewportWidth": 1440,
+        "viewportHeight": 1000,
+        "centerX": 0,
+        "centerY": 0,
+        "bodyHeight": 345,
+        "bodyWidth": 1342,
+        "bodyScrollWidth": 1342,
+        "count": 1
+      },
+      "maximized": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000,
+        "viewportWidth": 1440,
+        "viewportHeight": 1000,
+        "centerX": 0,
+        "centerY": 0,
+        "bodyHeight": 405,
+        "bodyWidth": 1428,
+        "bodyScrollWidth": 1428,
+        "count": 1
+      }
+    },
+    {
+      "viewport": [
+        1024,
+        768
+      ],
+      "default": {
+        "x": 30.5,
+        "y": 23,
+        "width": 963,
+        "height": 722,
+        "viewportWidth": 1024,
+        "viewportHeight": 768,
+        "centerX": 0,
+        "centerY": 0,
+        "bodyHeight": 127,
+        "bodyWidth": 951,
+        "bodyScrollWidth": 951,
+        "count": 1
+      },
+      "maximized": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 768,
+        "viewportWidth": 1024,
+        "viewportHeight": 768,
+        "centerX": 0,
+        "centerY": 0,
+        "bodyHeight": 173,
+        "bodyWidth": 1012,
+        "bodyScrollWidth": 1012,
+        "count": 1
+      }
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "default": {
+        "x": 23,
+        "y": 30.5,
+        "width": 722,
+        "height": 963,
+        "viewportWidth": 768,
+        "viewportHeight": 1024,
+        "centerX": 0,
+        "centerY": 0,
+        "bodyHeight": 377,
+        "bodyWidth": 710,
+        "bodyScrollWidth": 710,
+        "count": 1
+      },
+      "maximized": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 1024,
+        "viewportWidth": 768,
+        "viewportHeight": 1024,
+        "centerX": 0,
+        "centerY": 0,
+        "bodyHeight": 429,
+        "bodyWidth": 756,
+        "bodyScrollWidth": 756,
+        "count": 1
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "default": {
+        "x": 11.5,
+        "y": 25.5,
+        "width": 367,
+        "height": 793,
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "centerX": 0,
+        "centerY": 0,
+        "bodyHeight": 265,
+        "bodyWidth": 355,
+        "bodyScrollWidth": 355,
+        "count": 1
+      },
+      "maximized": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "centerX": 0,
+        "centerY": 0,
+        "bodyHeight": 316,
+        "bodyWidth": 378,
+        "bodyScrollWidth": 378,
+        "count": 1
+      }
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "default": {
+        "x": 0,
+        "y": 17,
+        "width": 320,
+        "height": 534,
+        "viewportWidth": 320,
+        "viewportHeight": 568,
+        "centerX": 0,
+        "centerY": 0,
+        "bodyHeight": 236,
+        "bodyWidth": 308,
+        "bodyScrollWidth": 308,
+        "count": 1
+      },
+      "maximized": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 568,
+        "viewportWidth": 320,
+        "viewportHeight": 568,
+        "centerX": 0,
+        "centerY": 0,
+        "bodyHeight": 270,
+        "bodyWidth": 308,
+        "bodyScrollWidth": 308,
+        "count": 1
+      }
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "default": {
+        "x": 25.5,
+        "y": 11.5,
+        "width": 793,
+        "height": 367,
+        "viewportWidth": 844,
+        "viewportHeight": 390,
+        "centerX": 0,
+        "centerY": 0,
+        "bodyHeight": 146,
+        "bodyWidth": 781,
+        "bodyScrollWidth": 781,
+        "count": 1
+      },
+      "maximized": {
+        "x": 0,
+        "y": 0,
+        "width": 844,
+        "height": 390,
+        "viewportWidth": 844,
+        "viewportHeight": 390,
+        "centerX": 0,
+        "centerY": 0,
+        "bodyHeight": 169,
+        "bodyWidth": 832,
+        "bodyScrollWidth": 832,
+        "count": 1
+      }
+    }
+  ],
+  "pageErrors": [],
+  "status": "passed"
+}
