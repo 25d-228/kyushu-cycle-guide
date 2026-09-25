@@ -1,55 +1,39 @@
 name: Verify published website
-
 on:
   push:
     branches: [main]
     paths: ['.github/workflows/verify-site.yml']
+  workflow_run:
+    workflows: ['pages build and deployment']
+    types: [completed]
   workflow_dispatch:
-
 permissions:
   contents: read
-
+concurrency:
+  group: verify-published-guide
+  cancel-in-progress: false
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 8
     steps:
-      - name: Check out the publishing branch
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          ref: gh-pages
-      - name: Verify HTTPS response and exact published HTML
-        env:
-          SITE_URL: https://25d-228.github.io/kyushu-cycle-guide/
-        shell: bash
+          ref: main
+      - name: Install browser validation tools
         run: |
-          node <<'NODE'
-          const fs = require('node:fs');
-          const crypto = require('node:crypto');
-          const hash = value => crypto.createHash('sha256').update(value).digest('hex');
-          const expected = hash(fs.readFileSync('index.html'));
-          (async () => {
-            let lastError;
-            for (let attempt = 1; attempt <= 6; attempt++) {
-              try {
-                const response = await fetch(process.env.SITE_URL, {
-                  headers: {'Cache-Control': 'no-cache'},
-                  signal: AbortSignal.timeout(15000)
-                });
-                if (response.status !== 200) throw new Error(`HTTP ${response.status}`);
-                const body = Buffer.from(await response.arrayBuffer());
-                const actual = hash(body);
-                if (actual !== expected) throw new Error(`Published HTML hash mismatch: ${actual}`);
-                const summary = `## Published website verified\n\nURL: ${process.env.SITE_URL}\n\nHTTP: 200\n\nHTML bytes: ${body.length}\n\nSHA-256: ${actual}\n\nPublished HTML matches the publishing branch exactly.\n`;
-                console.log(summary);
-                fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary);
-                return;
-              } catch (error) {
-                lastError = error;
-                console.log(`Verification attempt ${attempt}: ${error.message}`);
-                if (attempt < 6) await new Promise(resolve => setTimeout(resolve, 10000));
-              }
-            }
-            throw lastError;
-          })().catch(error => { console.error(error); process.exit(1); });
-          NODE
+          python -m pip install Pillow playwright
+          python -m playwright install chromium --with-deps
+      - name: Test every waypoint and mobile layout in the publishing source
+        run: python -u scripts/test_site.py
+      - name: Verify live HTTPS files, photographs, and rest-day navigation
+        run: python -u maintenance/verify_live.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-site-verification
+          path: |
+            live-verification.json
+            browser-test-report.json
+            live-*.png
+          retention-days: 7
