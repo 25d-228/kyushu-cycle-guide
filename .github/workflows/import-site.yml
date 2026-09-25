@@ -1,0 +1,56 @@
+name: Import original website
+
+on:
+  push:
+    branches: [main]
+    paths: ['.bootstrap/site.br']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: import-original-website
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Restore and verify the exact original HTML
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const zlib = require('node:zlib');
+          const crypto = require('node:crypto');
+          const archive = '.bootstrap/site.br';
+          if (!fs.existsSync(archive)) {
+            console.log('Original HTML has already been imported.');
+            process.exit(0);
+          }
+          const html = zlib.brotliDecompressSync(fs.readFileSync(archive));
+          const expected = '8889ac622837eff6cb141d687f385397ead770b53f92c7c3d3beb38be4575013';
+          const actual = crypto.createHash('sha256').update(html).digest('hex');
+          if (actual !== expected) throw new Error(`HTML checksum mismatch: ${actual}`);
+          fs.writeFileSync('index.html', html);
+          fs.writeFileSync('.nojekyll', '');
+          fs.unlinkSync(archive);
+          console.log(`Verified and restored ${html.length} bytes of the original website.`);
+          NODE
+      - name: Commit the verified website
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all -- index.html .nojekyll .bootstrap
+          if git diff --cached --quiet; then
+            echo 'No changes to import.'
+          else
+            git commit -m 'Publish original cycling navigator as index.html'
+            git push origin HEAD:main
+          fi
