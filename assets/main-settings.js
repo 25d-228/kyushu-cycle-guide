@@ -175,16 +175,18 @@
   q('uxResetSettings').addEventListener('click',()=>{draft={...defaults};refreshDraft();q('uxSaveInfo').textContent='初期値を選びました。「変更を保存」で表示設定だけを初期化します。';});
   q('uxSaveSettings').addEventListener('click',()=>{
     saved=normalize(draft);
-    try{localStorage.setItem(KEY,JSON.stringify(saved));localStorage.setItem(LEGACY,JSON.stringify({width:saved.width,height:saved.height,maximized:saved.maximized}));storageOK=true;}
+    try{localStorage.setItem(KEY,JSON.stringify(saved));storageOK=true;}
     catch(_){storageOK=false;}
+    try{localStorage.setItem(LEGACY,JSON.stringify({width:saved.width,height:saved.height,maximized:saved.maximized}));}catch(_){}
     apply();closeSettings();notify(storageOK?'表示設定を保存しました。次に開く詳細画面に適用されます。':'表示設定を適用しました。ブラウザに保存できないため、再読み込みすると元に戻ります。');
   });
   if(typeof moveCamera==='function'){const original=moveCamera;moveCamera=function(camera,animate=true){return original(camera,reduced()?false:animate);};}
-  let readingKey='',renderToken=0;const readingPositions=new Map();const miniExpanded={wide:null,narrow:null};
+  let readingKey='';const readingPositions=new Map();const miniExpanded={wide:null,narrow:null};
   function contentKey(){const n=window.JourneyNavigator?.getState();return [explorer.mode,n?.day,explorer.requested,explorer.tab].join('|');}
   function improveDialog(){
     apply();const nav=q('dialogJourneyNav'),map=nav?.querySelector('.journey-mini-map');
     if(map&&!map.closest('details')){const d=document.createElement('details');d.className='ux-map-disclosure';const category=placeDialog.hasAttribute('data-size-narrow')||placeDialog.hasAttribute('data-size-compact')?'narrow':'wide';d.open=miniExpanded[category]??(category==='wide');const s=document.createElement('summary');s.textContent='この日の地図（概略図）';map.before(d);d.append(s,map);s.addEventListener('click',()=>{miniExpanded[category]=!d.open;});}
+    q('dialogDayBtn').textContent='地図に戻る';
     const body=q('dialogBody'),gallery=body.querySelector('.journey-gallery');
     if(explorer.tab==='hotels'&&gallery&&!gallery.closest('.ux-location-photos')){const d=document.createElement('details');d.className='ux-location-photos';const s=document.createElement('summary');s.textContent='この街の写真を見る（ホテルの写真ではありません）';d.append(s,gallery);body.append(d);}
     if(explorer.tab==='rest'&&!body.querySelector('.ux-content-links')){const bar=document.createElement('nav');bar.className='ux-content-links';bar.setAttribute('aria-label','休養日の情報へ移動');for(const [label,selector] of [['過ごし方を選ぶ','.rest-plan-header'],['時間割を見る','.rest-timeline-head'],['写真を見る','.journey-gallery']]){const b=document.createElement('button');b.type='button';b.textContent=label;b.addEventListener('click',()=>{const t=body.querySelector(selector);if(t){t.setAttribute('tabindex','-1');body.scrollTo({top:t.getBoundingClientRect().top-body.getBoundingClientRect().top+body.scrollTop-12,behavior:'auto'});t.focus({preventScroll:true});}});bar.append(b);}body.prepend(bar);}
@@ -194,15 +196,15 @@
   const originalRender=renderDestination;
   renderDestination=function(){
     if(readingKey)readingPositions.set(readingKey,q('dialogBody').scrollTop);
-    originalRender();improveDialog();readingKey=contentKey();const position=readingPositions.get(readingKey)||0,token=++renderToken;
-    requestAnimationFrame(()=>{if(token===renderToken&&placeDialog.open)q('dialogBody').scrollTop=position;});
+    originalRender();improveDialog();readingKey=contentKey();
+    if(placeDialog.open)q('dialogBody').scrollTop=readingPositions.get(readingKey)||0;
   };
   // Saving a candidate replaces the body without going through renderDestination.
   const originalRefresh=refreshSavedButtons;
   refreshSavedButtons=function(){const top=q('dialogBody').scrollTop;originalRefresh();improveDialog();q('dialogBody').scrollTop=top;};
   const originalOpen=openPlace;
-  openPlace=function(...args){const result=originalOpen(...args);improveDialog();return result;};
-  placeDialog.addEventListener('close',()=>{if(readingKey)readingPositions.set(readingKey,q('dialogBody').scrollTop);readingKey='';renderToken++;});
+  openPlace=function(...args){const result=originalOpen(...args);improveDialog();readingKey=contentKey();q('dialogBody').scrollTop=readingPositions.get(readingKey)||0;return result;};
+  placeDialog.addEventListener('close',()=>{if(readingKey)readingPositions.set(readingKey,q('dialogBody').scrollTop);readingKey='';});
   document.addEventListener('keydown',event=>{
     const tab=event.target.closest?.('[role=tab]'),list=tab?.closest('[role=tablist]');if(!list||event.altKey||event.ctrlKey||event.metaKey)return;
     if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;
@@ -214,7 +216,21 @@
   new MutationObserver(()=>{if(placeDialog.open)improveDialog();}).observe(placeDialog,{attributes:true,attributeFilter:['open']});
   window.addEventListener('resize',()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(()=>{apply();if(modal.open)refreshDraft();if(placeDialog.open)improveDialog();});});
   matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change',apply);
-  window.addEventListener('storage',event=>{if(event.key===KEY){try{saved=normalize(JSON.parse(event.newValue||'null'));apply();if(modal.open){draft={...saved};refreshDraft();}}catch(_){}}});
+  window.addEventListener('storage',event=>{if(event.key===KEY){try{const dirty=modal.open&&JSON.stringify(draft)!==JSON.stringify(saved);saved=normalize(JSON.parse(event.newValue||'null'));apply();if(modal.open&&!dirty){draft={...saved};refreshDraft();}else if(dirty)q('uxSaveInfo').textContent='別のタブで表示設定が更新されました。編集中の内容は保持しています。保存すると、この内容が適用されます。';}catch(_){}}});
+  const selectedTabObserver=new MutationObserver(()=>{document.querySelectorAll('[role=tablist]').forEach(list=>list.querySelectorAll('[role=tab]').forEach(t=>t.tabIndex=t.getAttribute('aria-selected')==='true'?0:-1));});
+  document.querySelectorAll('[role=tablist]').forEach(list=>selectedTabObserver.observe(list,{subtree:true,attributes:true,attributeFilter:['aria-selected']}));
+  function containDialogFocus(event) {
+    if(event.key!=='Tab'||event.altKey||event.ctrlKey||event.metaKey)return;
+    const target=event.currentTarget;
+    const items=[...target.querySelectorAll('button,input,select,textarea,a[href],summary,[tabindex]')].filter(el=>!el.disabled&&el.tabIndex>=0&&el.getClientRects().length&&getComputedStyle(el).visibility!=='hidden');
+    if(!items.length){event.preventDefault();target.focus();return;}
+    const current=items.indexOf(document.activeElement);
+    if(current===-1||(!event.shiftKey&&current===items.length-1)||(event.shiftKey&&current===0)){
+      event.preventDefault();items[event.shiftKey?items.length-1:0].focus();
+    }
+  }
+  modal.addEventListener('keydown',containDialogFocus);
+  placeDialog.addEventListener('keydown',containDialogFocus);
   apply();improveDialog();
   window.JourneySettings=Object.freeze({version:'2026-09-26-main-settings-v1',getState:()=>({...saved}),storageKey:KEY,open:openSettings});
   window.JourneyDialogSize=Object.freeze({version:'2026-09-26-settings',getState:()=>({width:saved.width,height:saved.height,maximized:saved.maximized}),storageKey:LEGACY});
