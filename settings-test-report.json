@@ -1,0 +1,67 @@
+{
+  "url": "http://127.0.0.1:8767/",
+  "tests": [
+    "Settings open on main page; draft, cancel, save, focus containment, Escape, and reload persistence",
+    "Place search validation, no sizing controls in popups, hotel-first layout, tab reading position, arrow keys",
+    "All map places, route positions, and arrival/rest/departure boundaries",
+    "Reset only display preferences; cancelling reset leaves settings unchanged",
+    "Settings, minimum popup sizes, fullscreen presets and tabs at seven viewport sizes",
+    "Rest-day photo loading and direct jumps to the timetable",
+    "Previous size preferences migrate; storage-denied browsers show an honest fallback"
+  ],
+  "layouts": [
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "passed": true
+    },
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "passed": true
+    },
+    {
+      "viewport": [
+        1024,
+        768
+      ],
+      "passed": true
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "passed": true
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "passed": true
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "passed": true
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "passed": true
+    }
+  ],
+  "mappedPlaces": 107,
+  "navigationPositions": 133,
+  "pageErrors": [],
+  "status": "passed"
+}

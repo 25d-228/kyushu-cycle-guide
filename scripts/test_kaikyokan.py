@@ -43,6 +43,7 @@ try:
         assert state['mode']=='kaikyo' and state['place']==pos['place'] and state['index']==pos['index']
         page.evaluate('p=>openPlace(p.place,"kaikyo","sights")',pos)
         assert '試走B' in page.locator('#dialogTripLabel').inner_text()
+        assert page.evaluate('JourneyNavigator.getState().index')==pos['index'],'repeat index preserved'
         images=page.locator('#dialogBody .journey-gallery img')
         assert images.count()>0,pos
         images.evaluate_all("items=>items.forEach(i=>i.loading='eager')")
