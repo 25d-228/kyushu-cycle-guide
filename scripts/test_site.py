@@ -18,12 +18,12 @@ try:
         errors=[];page.on('pageerror',lambda err:errors.append(str(err)))
         page.goto('http://127.0.0.1:8765/',wait_until='networkidle')
         page.wait_for_function('window.JourneyPhotos && window.JourneyNavigator && window.JourneyDialogSize')
-        assert page.locator('.rest-city-card .journey-place-cover').count()==3
+        assert page.locator('.rest-city-card .journey-place-cover').count()==4
         for city in page.evaluate('Object.keys(DATA.places)'):
             page.evaluate('(city)=>openPlace(city, "main", "sights")',city)
             assert page.locator('#dialogBody .journey-gallery img').count()>0,city
             page.evaluate('closeDestination()')
-        positions=page.evaluate('Object.entries({small:DATA.small,main:DATA.main}).flatMap(([mode,days])=>days.flatMap(d=>d.stops.map((place,index)=>({mode,day:d.day,index,place}))))')
+        positions=page.evaluate('Object.entries({small:DATA.small,kaikyo:DATA.kaikyo,main:DATA.main}).flatMap(([mode,days])=>days.flatMap(d=>d.stops.map((place,index)=>({mode,day:d.day,index,place}))))')
         for pos in positions:
             result=page.evaluate('(p)=>{JourneyNavigator.select(p.mode,p.day,p.index);return JourneyNavigator.getState()}',pos)
             assert result['place']==pos['place'] and result['day']==pos['day'],pos

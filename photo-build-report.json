@@ -1,11 +1,12 @@
 {
   "missing": [],
-  "places": 92,
+  "places": 109,
   "rest": {
     "日田": 3,
     "熊本": 3,
-    "宮崎": 3
+    "宮崎": 3,
+    "下関": 3
   },
-  "sights": 23,
-  "uniquePhotographsUsed": 96
+  "sights": 29,
+  "uniquePhotographsUsed": 113
 }

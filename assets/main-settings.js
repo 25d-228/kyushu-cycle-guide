@@ -107,14 +107,14 @@
   document.querySelector('.site-header').append(mobileNav);
   const skip=document.createElement('a');skip.href='#workspace';skip.className='ux-skip';skip.textContent='地図と日程の操作へ';document.body.prepend(skip);
   const search=document.createElement('form');search.className='ux-search';search.setAttribute('role','search');
-  search.innerHTML='<label for="uxPlaceSearch">地名を検索</label><input id="uxPlaceSearch" type="search" list="uxPlaceOptions" autocomplete="off" placeholder="例：日田、熊本、宮崎" aria-describedby="uxSearchStatus"><button type="submit">詳細を開く</button><datalist id="uxPlaceOptions"></datalist><p id="uxSearchStatus" role="status" aria-live="polite">地図にある地名を入力するか、候補から選んでください。</p>';
+  search.innerHTML='<label for="uxPlaceSearch">地名を検索</label><input id="uxPlaceSearch" type="search" list="uxPlaceOptions" autocomplete="off" placeholder="例：日田、海響館、熊本" aria-describedby="uxSearchStatus"><button type="submit">詳細を開く</button><datalist id="uxPlaceOptions"></datalist><p id="uxSearchStatus" role="status" aria-live="polite">地図にある地名を入力するか、候補から選んでください。</p>';
   document.getElementById('workspace').before(search);
   for(const name of Object.keys(DATA.places)){const o=document.createElement('option');o.value=name;search.querySelector('datalist').append(o);}
   search.addEventListener('input',()=>{const s=search.querySelector('p');s.removeAttribute('data-error');s.textContent='地図にある地名を入力するか、候補から選んでください。';search.querySelector('input').removeAttribute('aria-invalid');});
   search.addEventListener('submit',event=>{
     event.preventDefault();const input=search.querySelector('input'),name=input.value.trim(),s=search.querySelector('p');
     if(!Object.hasOwn(DATA.places,name)){s.setAttribute('data-error','');s.textContent='その地名は見つかりませんでした。入力欄の候補から選んでください。';input.setAttribute('aria-invalid','true');input.focus();return;}
-    const modes=['small','main'].filter(m=>DATA[m].some(d=>d.stops.includes(name)));
+    const modes=['small','kaikyo','main'].filter(m=>DATA[m].some(d=>d.stops.includes(name)));
     const current=window.JourneyNavigator?.getState().mode;
     input.focus();openPlace(name,modes.includes(current)?current:modes[0]||'main');
   });
