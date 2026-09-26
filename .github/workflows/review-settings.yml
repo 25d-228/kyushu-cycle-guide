@@ -1,0 +1,51 @@
+name: Review main-page settings
+on:
+  push:
+    branches: [ux/main-page-settings]
+    paths: ['.github/workflows/review-settings.yml', 'assets/main-settings.js', 'scripts/test_settings.py']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: review-main-page-settings
+  cancel-in-progress: true
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble settings update when present
+        run: |
+          if [ -f assets/main-settings.js ]; then
+            python - <<'PY'
+          from pathlib import Path
+          p=Path('assets/guide-enhancements.js')
+          s=p.read_text(encoding='utf-8')
+          marker='/* User-adjustable dialog size;'
+          if marker in s: s=s[:s.index(marker)]
+          marker='/* Main-page settings and usability improvements. */'
+          if marker in s: s=s[:s.index(marker)]
+          p.write_text(s.rstrip()+'\n\n'+Path('assets/main-settings.js').read_text(encoding='utf-8'),encoding='utf-8')
+          PY
+            node --check assets/guide-enhancements.js
+          fi
+      - name: Test settings and existing navigation when tests are present
+        run: |
+          if [ -f scripts/test_settings.py ]; then
+            python -m pip install Pillow playwright
+            python -m playwright install chromium --with-deps
+            python -u scripts/test_settings.py
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: settings-review
+          path: |
+            index.html
+            assets/
+            scripts/
+            maintenance/
+            settings-test-report.json
+            settings-*.png
+          retention-days: 7
