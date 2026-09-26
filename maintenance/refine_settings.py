@@ -15,4 +15,18 @@ s=s.replace(old,new)
 marker="  apply();improveDialog();\n  window.JourneySettings="
 if 'selectedTabObserver' not in s:
     s=s.replace(marker, "  const selectedTabObserver=new MutationObserver(()=>{document.querySelectorAll('[role=tablist]').forEach(list=>list.querySelectorAll('[role=tab]').forEach(t=>t.tabIndex=t.getAttribute('aria-selected')==='true'?0:-1));});\n  document.querySelectorAll('[role=tablist]').forEach(list=>selectedTabObserver.observe(list,{subtree:true,attributes:true,attributeFilter:['aria-selected']}));\n"+marker)
+if 'function containDialogFocus' not in s:
+    s=s.replace(marker, '''  function containDialogFocus(event) {
+    if(event.key!=='Tab'||event.altKey||event.ctrlKey||event.metaKey)return;
+    const target=event.currentTarget;
+    const items=[...target.querySelectorAll('button,input,select,textarea,a[href],summary,[tabindex]')].filter(el=>!el.disabled&&el.tabIndex>=0&&el.getClientRects().length&&getComputedStyle(el).visibility!=='hidden');
+    if(!items.length){event.preventDefault();target.focus();return;}
+    const current=items.indexOf(document.activeElement);
+    if(current===-1||(!event.shiftKey&&current===items.length-1)||(event.shiftKey&&current===0)){
+      event.preventDefault();items[event.shiftKey?items.length-1:0].focus();
+    }
+  }
+  modal.addEventListener('keydown',containDialogFocus);
+  placeDialog.addEventListener('keydown',containDialogFocus);
+''' + marker)
 p.write_text(s,encoding='utf-8')
