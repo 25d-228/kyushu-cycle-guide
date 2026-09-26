@@ -2,7 +2,7 @@ name: Review main-page settings
 on:
   push:
     branches: [ux/main-page-settings]
-    paths: ['.github/workflows/review-settings.yml', 'assets/main-settings.js', 'scripts/test_settings.py']
+    paths: ['.github/workflows/review-settings.yml', 'assets/main-settings.js', 'scripts/test_settings.py', 'maintenance/refine_settings.py']
   workflow_dispatch:
 permissions:
   contents: write
@@ -17,6 +17,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Assemble the reviewed settings module without the old popup controls
         run: |
+          python maintenance/refine_settings.py
           python - <<'PY'
           from pathlib import Path
           import re
@@ -44,7 +45,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html assets/guide-enhancements.js assets/dialog-size-controls.js scripts/test_dialog_size.py
+          git add index.html assets/main-settings.js assets/guide-enhancements.js assets/dialog-size-controls.js scripts/test_dialog_size.py
           if ! git diff --cached --quiet; then
             git commit -m 'Bundle validated main-page settings and retire popup sizing toolbar'
             git push origin HEAD:ux/main-page-settings
