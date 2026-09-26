@@ -17,7 +17,7 @@ try:
         page=browser.new_page(viewport={'width':1440,'height':1000})
         errors=[];page.on('pageerror',lambda err:errors.append(str(err)))
         page.goto('http://127.0.0.1:8765/',wait_until='networkidle')
-        page.wait_for_function('window.JourneyPhotos && window.JourneyNavigator')
+        page.wait_for_function('window.JourneyPhotos && window.JourneyNavigator && window.JourneyDialogSize')
         assert page.locator('.rest-city-card .journey-place-cover').count()==3
         for city in page.evaluate('Object.keys(DATA.places)'):
             page.evaluate('(city)=>openPlace(city, "main", "sights")',city)
@@ -60,10 +60,10 @@ try:
                         scrollWidth:body.scrollWidth};
                 }''')
                 assert metrics['centerErrorX']<2 and metrics['centerErrorY']<2,(city,metrics)
-                assert metrics['width']<=width-16 and metrics['height']<=height-16,metrics
+                assert metrics['width']<=width+1 and metrics['height']<=height+1,metrics
                 assert metrics['bodyHeight']>=90,metrics
                 assert metrics['scrollWidth']<=metrics['bodyWidth']+1,metrics
-                if width>=1200:assert metrics['width']==1120,metrics
+                if width>=1200:assert abs(metrics['width']-width*.94)<2,metrics
                 for tab in ['#sightTab','#hotelTab','#restTab']:
                     page.locator(tab).click()
                     assert page.locator('#destinationDialog').is_visible()

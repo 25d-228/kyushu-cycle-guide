@@ -1,0 +1,64 @@
+name: Prepare resizable place dialogs
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/prepare-dialog-size.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: prepare-dialog-size
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Bundle the size controls and update fixed-size regression assertions
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          bundle=Path('assets/guide-enhancements.js')
+          marker='/* User-adjustable dialog size;'
+          text=bundle.read_text(encoding='utf-8')
+          if marker in text:text=text[:text.index(marker)]
+          text=text.rstrip()+'\n\n'+Path('assets/dialog-size-controls.js').read_text(encoding='utf-8')
+          bundle.write_text(text,encoding='utf-8')
+          tests=Path('scripts/test_site.py')
+          text=tests.read_text(encoding='utf-8')
+          text=text.replace('window.JourneyPhotos && window.JourneyNavigator', 'window.JourneyPhotos && window.JourneyNavigator && window.JourneyDialogSize')
+          text=text.replace("metrics['width']<=width-16 and metrics['height']<=height-16", "metrics['width']<=width+1 and metrics['height']<=height+1")
+          text=text.replace("if width>=1200:assert metrics['width']==1120,metrics", "if width>=1200:assert abs(metrics['width']-width*.94)<2,metrics")
+          tests.write_text(text,encoding='utf-8')
+          PY
+          node --check assets/guide-enhancements.js
+      - name: Install browser test tools
+        run: |
+          python -m pip install Pillow playwright
+          python -m playwright install chromium --with-deps
+      - name: Verify all route locations, photographs, and responsive layouts
+        run: python -u scripts/test_site.py
+      - name: Test resizing, maximize, drag, keyboard input, and saved preferences
+        run: python -u scripts/test_dialog_size.py
+      - name: Save tested website source
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/guide-enhancements.js scripts/test_site.py browser-test-report.json dialog-size-test-report.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Enable tested user-resizable place popups with saved dimensions'
+            git push origin HEAD:main
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: resizable-dialog-validation
+          path: |
+            dialog-size-test-report.json
+            browser-test-report.json
+            resizable-*.png
+            test-mobile.png
+          retention-days: 7

@@ -7,5 +7,343 @@
     "宮崎": 3
   },
   "pageErrors": [],
-  "mobileLayout": "passed"
+  "mobileLayout": "passed",
+  "centeredDialogLayouts": [
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "city": "熊本",
+      "x": 43,
+      "y": 30,
+      "width": 1354,
+      "height": 940,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 400,
+      "bodyWidth": 1342,
+      "scrollWidth": 1342
+    },
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "city": "日田",
+      "x": 43,
+      "y": 30,
+      "width": 1354,
+      "height": 940,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 400,
+      "bodyWidth": 1342,
+      "scrollWidth": 1342
+    },
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "city": "宮崎",
+      "x": 43,
+      "y": 30,
+      "width": 1354,
+      "height": 940,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 400,
+      "bodyWidth": 1342,
+      "scrollWidth": 1342
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "city": "熊本",
+      "x": 57.5,
+      "y": 32.5,
+      "width": 1805,
+      "height": 1015,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 475,
+      "bodyWidth": 1793,
+      "scrollWidth": 1793
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "city": "日田",
+      "x": 57.5,
+      "y": 32.5,
+      "width": 1805,
+      "height": 1015,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 475,
+      "bodyWidth": 1793,
+      "scrollWidth": 1793
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "city": "宮崎",
+      "x": 57.5,
+      "y": 32.5,
+      "width": 1805,
+      "height": 1015,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 475,
+      "bodyWidth": 1793,
+      "scrollWidth": 1793
+    },
+    {
+      "viewport": [
+        1024,
+        768
+      ],
+      "city": "熊本",
+      "x": 30.5,
+      "y": 23,
+      "width": 963,
+      "height": 722,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 182,
+      "bodyWidth": 951,
+      "scrollWidth": 951
+    },
+    {
+      "viewport": [
+        1024,
+        768
+      ],
+      "city": "日田",
+      "x": 30.5,
+      "y": 23,
+      "width": 963,
+      "height": 722,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 182,
+      "bodyWidth": 951,
+      "scrollWidth": 951
+    },
+    {
+      "viewport": [
+        1024,
+        768
+      ],
+      "city": "宮崎",
+      "x": 30.5,
+      "y": 23,
+      "width": 963,
+      "height": 722,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 182,
+      "bodyWidth": 951,
+      "scrollWidth": 951
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "city": "熊本",
+      "x": 23,
+      "y": 30.5,
+      "width": 722,
+      "height": 963,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 454,
+      "bodyWidth": 710,
+      "scrollWidth": 710
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "city": "日田",
+      "x": 23,
+      "y": 30.5,
+      "width": 722,
+      "height": 963,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 454,
+      "bodyWidth": 710,
+      "scrollWidth": 710
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "city": "宮崎",
+      "x": 23,
+      "y": 30.5,
+      "width": 722,
+      "height": 963,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 454,
+      "bodyWidth": 710,
+      "scrollWidth": 710
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "city": "熊本",
+      "x": 11.5,
+      "y": 25.5,
+      "width": 367,
+      "height": 793,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 265,
+      "bodyWidth": 355,
+      "scrollWidth": 355
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "city": "日田",
+      "x": 11.5,
+      "y": 25.5,
+      "width": 367,
+      "height": 793,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 265,
+      "bodyWidth": 355,
+      "scrollWidth": 355
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "city": "宮崎",
+      "x": 11.5,
+      "y": 25.5,
+      "width": 367,
+      "height": 793,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 265,
+      "bodyWidth": 355,
+      "scrollWidth": 355
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "city": "熊本",
+      "x": 0,
+      "y": 17,
+      "width": 320,
+      "height": 534,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 236,
+      "bodyWidth": 308,
+      "scrollWidth": 308
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "city": "日田",
+      "x": 0,
+      "y": 17,
+      "width": 320,
+      "height": 534,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 236,
+      "bodyWidth": 308,
+      "scrollWidth": 308
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "city": "宮崎",
+      "x": 0,
+      "y": 17,
+      "width": 320,
+      "height": 534,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 236,
+      "bodyWidth": 308,
+      "scrollWidth": 308
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "city": "熊本",
+      "x": 25.5,
+      "y": 11.5,
+      "width": 793,
+      "height": 367,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 146,
+      "bodyWidth": 781,
+      "scrollWidth": 781
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "city": "日田",
+      "x": 25.5,
+      "y": 11.5,
+      "width": 793,
+      "height": 367,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 146,
+      "bodyWidth": 781,
+      "scrollWidth": 781
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "city": "宮崎",
+      "x": 25.5,
+      "y": 11.5,
+      "width": 793,
+      "height": 367,
+      "centerErrorX": 0,
+      "centerErrorY": 0,
+      "bodyHeight": 146,
+      "bodyWidth": 781,
+      "scrollWidth": 781
+    }
+  ]
 }
