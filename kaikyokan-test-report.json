@@ -1,0 +1,39 @@
+{
+  "url": "http://127.0.0.1:8768/",
+  "tests": [
+    "Three independent trip selectors, comparison cards and route layers",
+    "Each trip keeps a separate start date across reloads; new trip has four hotel nights",
+    "Every new waypoint opens correctly; arrival/rest/departure navigation preserves the rest day; rail and pushing are separate transport modes",
+    "Aquarium rest-day variants, 2-night Jalan hotel, search and main-page size settings remain usable"
+  ],
+  "status": "passed",
+  "newNavigationPositions": 23,
+  "newRestDay": 4,
+  "layouts": [
+    [
+      1440,
+      1000
+    ],
+    [
+      1024,
+      768
+    ],
+    [
+      768,
+      1024
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      320,
+      568
+    ],
+    [
+      844,
+      390
+    ]
+  ],
+  "pageErrors": []
+}
