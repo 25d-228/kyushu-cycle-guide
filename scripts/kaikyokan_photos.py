@@ -30,8 +30,7 @@ def official(ident,label):
     url=f'https://yamaguchi-tourism.jp/photo/detail_{ident}.html'
     page=get(url).decode('utf-8')
     if '観光' not in page or '加工' not in page:raise RuntimeError('Photo terms not found: '+url)
-    src=f'https://yamaguchi-tourism.jp/lsc/api/photo/?src={ident}'
-    raw=get(src);path,w,h=save_image(raw,url)
+    raw=get(f'https://yamaguchi-tourism.jp/lsc/api/photo/?src={ident}');path,w,h=save_image(raw,url)
     item=dict(src=path,label=label,article=label,author='山口県観光連盟・写真提供者',license='観光PR用の画像利用規約',license_url=url,source=url,width=w,height=h,original=str(ident),context='山口県の観光紹介として利用。写真は撮影当時の様子です。')
     added.append(item);return item
 
@@ -57,16 +56,19 @@ aquarium=official('1701036','海響館の外観')
 dolphins=official('1700553','海響館のイルカショー（撮影当時）')
 bridge=official('1400122','角島大橋')
 tunnel=official('1700564','関門トンネル人道の内部')
+beach=official('1700581','土井ヶ浜')
 manifest['places']['海響館']=[aquarium]
 manifest['places']['下関']=[aquarium]
 manifest['places']['角島大橋']=[bridge]
+manifest['places']['土井ヶ浜']=[beach]
 manifest['places']['関門トンネル下関側']=[tunnel]
 manifest['places']['関門トンネル門司側']=[dict(tunnel,context='両岸を結ぶ人道トンネル内部の写真です。門司側入口の外観ではありません。')]
 places={
  '下関駅':['下関駅'],'吉見':['吉見駅'],'川棚温泉':['川棚温泉','川棚温泉駅'],
- '湯玉':['湯玉駅'],'土井ヶ浜':['土井ヶ浜'],'角島灯台':['角島灯台'],
- '滝部':['滝部駅'],'豊田':['道の駅蛍街道西ノ市'],'菊川':['道の駅きくがわ'],
+ '湯玉':['湯玉駅'],'角島灯台':['角島灯台'],'滝部':['滝部駅'],
+ '豊田':['道の駅蛍街道西ノ市'],'菊川':['道の駅きくがわ'],
  '長府':['功山寺'],'赤間神宮':['赤間神宮'],'門司港':['門司港駅']}
+missing=[]
 for city,titles in places.items():
     errors=[]
     for title in titles:
@@ -75,14 +77,14 @@ for city,titles in places.items():
             if city!=title:item['context']=city+'周辺の立ち寄り・移動の目印です。写真の場所は見出しで確認できます。'
             manifest['places'][city]=[item];break
         except Exception as e:errors.append(str(e))
-    else:raise RuntimeError(city+': '+'; '.join(errors))
+    else:missing.append(city+': '+'; '.join(errors));print('MISSING',missing[-1],flush=True)
+if missing:raise RuntimeError('\n'.join(missing))
 karato=wiki('唐戸市場')
 manifest['rest']['下関']=[aquarium,dolphins,karato]
 manifest['sights'].update({'kb-aquarium':aquarium,'kb-karato':karato,'kb-kawatana':manifest['places']['川棚温泉'][0],'kb-bridge':bridge,'kb-lighthouse':manifest['places']['角島灯台'][0],'kb-tunnel':tunnel})
 manifest['kaikyokanAdded']='2026-09-26'
 (P/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
 (P/'data.js').write_text('window.JOURNEY_PHOTOS='+json.dumps(manifest,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf-8')
-# Credits are visible beneath every photo and retained in the repository as well.
 credit=ROOT/'PHOTO-CREDITS.md'
 old=credit.read_text(encoding='utf-8') if credit.exists() else '# Photo credits\n'
 marker='\n## 試走B・海響館の追加写真'
@@ -91,6 +93,6 @@ text=marker+'\n\n山口県観光連盟の写真は観光PR用の利用規約に�
 unique={i['src']:i for i in added}
 for i in unique.values():text+=f"- **{i['label']}** — {i['author']} — [{i['license']}]({i['license_url']}) — [出典]({i['source']}) — `{i['src']}`\n"
 credit.write_text(old+text,encoding='utf-8')
-report={'newPhotographs':len(unique),'newPlaces':len(places)+5,'restPhotos':len(manifest['rest']['下関']),'added':list(unique.values())}
+report={'newPhotographs':len(unique),'newPlaces':len(places)+6,'restPhotos':len(manifest['rest']['下関']),'added':list(unique.values())}
 (ROOT/'kaikyokan-photo-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
 print('New trial photographs saved:',len(unique),flush=True)
