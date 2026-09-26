@@ -5,7 +5,7 @@ on:
     paths: ['.github/workflows/review-settings.yml', 'assets/main-settings.js', 'scripts/test_settings.py']
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 concurrency:
   group: review-main-page-settings
   cancel-in-progress: true
@@ -15,27 +15,39 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - name: Assemble settings update when present
+      - name: Assemble the reviewed settings module without the old popup controls
         run: |
-          if [ -f assets/main-settings.js ]; then
-            python - <<'PY'
+          python - <<'PY'
           from pathlib import Path
+          import re
           p=Path('assets/guide-enhancements.js')
           s=p.read_text(encoding='utf-8')
-          marker='/* User-adjustable dialog size;'
-          if marker in s: s=s[:s.index(marker)]
-          marker='/* Main-page settings and usability improvements. */'
-          if marker in s: s=s[:s.index(marker)]
+          for marker in ['/* User-adjustable dialog size;', '/* Main-page settings and usability improvements. */']:
+              if marker in s: s=s[:s.index(marker)]
           p.write_text(s.rstrip()+'\n\n'+Path('assets/main-settings.js').read_text(encoding='utf-8'),encoding='utf-8')
+          p=Path('index.html')
+          s=re.sub(r'assets/guide-enhancements\.js(?:\?[^"\s]*)?', 'assets/guide-enhancements.js?v=main-settings-20260926',p.read_text(encoding='utf-8'))
+          p.write_text(s,encoding='utf-8')
+          Path('assets/dialog-size-controls.js').write_text('/* Retired: display preferences are provided by assets/main-settings.js. */\n')
+          Path('scripts/test_dialog_size.py').write_text('"""Compatibility entry point: sizing controls now live in main-page settings."""\nimport runpy\nfrom pathlib import Path\nrunpy.run_path(str(Path(__file__).with_name("test_settings.py")), run_name="__main__")\n')
           PY
-            node --check assets/guide-enhancements.js
-          fi
-      - name: Test settings and existing navigation when tests are present
+          node --check assets/guide-enhancements.js
+      - name: Install browser test tools
         run: |
-          if [ -f scripts/test_settings.py ]; then
-            python -m pip install Pillow playwright
-            python -m playwright install chromium --with-deps
-            python -u scripts/test_settings.py
+          python -m pip install Pillow playwright
+          python -m playwright install chromium --with-deps
+      - name: Verify the existing trip navigator and photo galleries
+        run: python -u scripts/test_site.py
+      - name: Verify settings, search, focus, saved preferences and mobile layouts
+        run: python -u scripts/test_settings.py
+      - name: Commit only the validated website and tests to the review branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html assets/guide-enhancements.js assets/dialog-size-controls.js scripts/test_dialog_size.py
+          if ! git diff --cached --quiet; then
+            git commit -m 'Bundle validated main-page settings and retire popup sizing toolbar'
+            git push origin HEAD:ux/main-page-settings
           fi
       - uses: actions/upload-artifact@v4
         if: always()
@@ -47,5 +59,7 @@ jobs:
             scripts/
             maintenance/
             settings-test-report.json
+            browser-test-report.json
             settings-*.png
+            test-*.png
           retention-days: 7
