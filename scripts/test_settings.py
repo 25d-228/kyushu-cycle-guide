@@ -62,7 +62,7 @@ try:
         names=page.evaluate('Object.keys(DATA.places)')
         for name in names:
             open_place(page,name,'sights');assert page.locator('#dialogBody .journey-gallery img').count()>0,name;page.evaluate('closeDestination()')
-        positions=page.evaluate('Object.entries({small:DATA.small,main:DATA.main}).flatMap(([m,days])=>days.flatMap(d=>d.stops.map((place,index)=>({mode:m,day:d.day,index,place}))))')
+        positions=page.evaluate('Object.entries({small:DATA.small,kaikyo:DATA.kaikyo,main:DATA.main}).flatMap(([m,days])=>days.flatMap(d=>d.stops.map((place,index)=>({mode:m,day:d.day,index,place}))))')
         for pos in positions:
             current=page.evaluate('p=>{JourneyNavigator.select(p.mode,p.day,p.index);return JourneyNavigator.getState()}',pos)
             assert current['place']==pos['place'] and current['day']==pos['day']

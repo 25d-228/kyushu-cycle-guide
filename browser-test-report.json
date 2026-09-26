@@ -1,10 +1,11 @@
 {
-  "waypointsWithPhotos": 92,
-  "navigationPositionsTested": 110,
+  "waypointsWithPhotos": 109,
+  "navigationPositionsTested": 133,
   "restDayGalleries": {
     "日田": 3,
     "熊本": 3,
-    "宮崎": 3
+    "宮崎": 3,
+    "下関": 3
   },
   "pageErrors": [],
   "mobileLayout": "passed",
@@ -21,7 +22,7 @@
       "height": 940,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 400,
+      "bodyHeight": 411,
       "bodyWidth": 1342,
       "scrollWidth": 1342
     },
@@ -37,7 +38,7 @@
       "height": 940,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 400,
+      "bodyHeight": 411,
       "bodyWidth": 1342,
       "scrollWidth": 1342
     },
@@ -53,7 +54,7 @@
       "height": 940,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 400,
+      "bodyHeight": 411,
       "bodyWidth": 1342,
       "scrollWidth": 1342
     },
@@ -69,7 +70,7 @@
       "height": 1015,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 475,
+      "bodyHeight": 486,
       "bodyWidth": 1793,
       "scrollWidth": 1793
     },
@@ -85,7 +86,7 @@
       "height": 1015,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 475,
+      "bodyHeight": 486,
       "bodyWidth": 1793,
       "scrollWidth": 1793
     },
@@ -101,7 +102,7 @@
       "height": 1015,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 475,
+      "bodyHeight": 486,
       "bodyWidth": 1793,
       "scrollWidth": 1793
     },
@@ -117,7 +118,7 @@
       "height": 722,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 182,
+      "bodyHeight": 193,
       "bodyWidth": 951,
       "scrollWidth": 951
     },
@@ -133,7 +134,7 @@
       "height": 722,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 182,
+      "bodyHeight": 193,
       "bodyWidth": 951,
       "scrollWidth": 951
     },
@@ -149,7 +150,7 @@
       "height": 722,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 182,
+      "bodyHeight": 193,
       "bodyWidth": 951,
       "scrollWidth": 951
     },
@@ -165,7 +166,7 @@
       "height": 963,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 454,
+      "bodyHeight": 568,
       "bodyWidth": 710,
       "scrollWidth": 710
     },
@@ -181,7 +182,7 @@
       "height": 963,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 454,
+      "bodyHeight": 568,
       "bodyWidth": 710,
       "scrollWidth": 710
     },
@@ -197,7 +198,7 @@
       "height": 963,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 454,
+      "bodyHeight": 568,
       "bodyWidth": 710,
       "scrollWidth": 710
     },
@@ -213,7 +214,7 @@
       "height": 793,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 265,
+      "bodyHeight": 396,
       "bodyWidth": 355,
       "scrollWidth": 355
     },
@@ -229,7 +230,7 @@
       "height": 793,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 265,
+      "bodyHeight": 396,
       "bodyWidth": 355,
       "scrollWidth": 355
     },
@@ -245,7 +246,7 @@
       "height": 793,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 265,
+      "bodyHeight": 396,
       "bodyWidth": 355,
       "scrollWidth": 355
     },
@@ -261,7 +262,7 @@
       "height": 534,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 236,
+      "bodyHeight": 244,
       "bodyWidth": 308,
       "scrollWidth": 308
     },
@@ -277,7 +278,7 @@
       "height": 534,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 236,
+      "bodyHeight": 244,
       "bodyWidth": 308,
       "scrollWidth": 308
     },
@@ -293,7 +294,7 @@
       "height": 534,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 236,
+      "bodyHeight": 244,
       "bodyWidth": 308,
       "scrollWidth": 308
     },
@@ -309,7 +310,7 @@
       "height": 367,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 146,
+      "bodyHeight": 136,
       "bodyWidth": 781,
       "scrollWidth": 781
     },
@@ -325,7 +326,7 @@
       "height": 367,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 146,
+      "bodyHeight": 136,
       "bodyWidth": 781,
       "scrollWidth": 781
     },
@@ -341,7 +342,7 @@
       "height": 367,
       "centerErrorX": 0,
       "centerErrorY": 0,
-      "bodyHeight": 146,
+      "bodyHeight": 136,
       "bodyWidth": 781,
       "scrollWidth": 781
     }

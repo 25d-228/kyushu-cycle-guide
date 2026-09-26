@@ -8,7 +8,7 @@ BASE='https://25d-228.github.io/kyushu-cycle-guide/'
 manifest=json.loads((ROOT/'assets/photos/manifest.json').read_text())
 assert manifest['version']=='2026-09-25-photos-ja-v2'
 assert not json.loads((ROOT/'photo-build-report.json').read_text())['missing']
-paths={'index.html','assets/guide-enhancements.js','assets/photos/data.js','assets/photos/manifest.json'}
+paths={'index.html','assets/trip-catalog.js','assets/guide-enhancements.js','assets/photos/data.js','assets/photos/manifest.json'}
 for group in ['places','rest']:
     for photos in manifest[group].values():paths.update(p['src'] for p in photos)
 paths.update(p['src'] for p in manifest['sights'].values())
@@ -55,7 +55,7 @@ with sync_playwright() as p:
     page.screenshot(path=str(ROOT/'live-mobile.png'))
     assert not errors,errors
     browser.close()
-report={'url':BASE,'http':200,'exactFilesVerified':len(verified),'photoVersion':manifest['version'],'routeWaypoints':90,'restGalleryPhotos':{c:len(v) for c,v in manifest['rest'].items()},'liveBrowserErrors':errors,'mobilePhotoDimensions':dimensions,'restDayNavigation':'passed'}
+report={'url':BASE,'http':200,'exactFilesVerified':len(verified),'photoVersion':manifest['version'],'routeWaypoints':107,'restGalleryPhotos':{c:len(v) for c,v in manifest['rest'].items()},'liveBrowserErrors':errors,'mobilePhotoDimensions':dimensions,'restDayNavigation':'passed'}
 print('LIVE_VERIFIED',json.dumps(report,ensure_ascii=False),flush=True)
 (ROOT/'live-verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
 if os.environ.get('GITHUB_STEP_SUMMARY'):

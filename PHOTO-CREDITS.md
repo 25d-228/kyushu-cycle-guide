@@ -97,3 +97,25 @@
 - 宮崎駅 — Peachkk — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:%E5%AE%AE%E5%B4%8E%E9%A7%85%E5%89%8D.jpg
 - 竹原古墳 — 水だらけのプール — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Takehara_kofun_04.jpg
 - 九十九島パールシーリゾート — 663highland — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:200320_Kujukushima_Pearl_Sea_Resort_Sasebo_Nagasaki_pref_Japan10s3.jpg
+
+## 試走B・海響館の追加写真
+
+山口県観光連盟の写真は観光PR用の利用規約に基づいて掲載。Commons写真はそれぞれのライセンスに従い、表示用に縮小しています。
+
+- **海響館の外観** — 山口県観光連盟・写真提供者 — [観光PR用の画像利用規約](https://yamaguchi-tourism.jp/photo/detail_1701036.html) — [出典](https://yamaguchi-tourism.jp/photo/detail_1701036.html) — `assets/photos/kb-b2ca4bd5bbc2c464.jpg`
+- **海響館のイルカショー（撮影当時）** — 山口県観光連盟・写真提供者 — [観光PR用の画像利用規約](https://yamaguchi-tourism.jp/photo/detail_1700553.html) — [出典](https://yamaguchi-tourism.jp/photo/detail_1700553.html) — `assets/photos/kb-8e8f87d1417a5031.jpg`
+- **角島大橋** — 山口県観光連盟・写真提供者 — [観光PR用の画像利用規約](https://yamaguchi-tourism.jp/photo/detail_1400122.html) — [出典](https://yamaguchi-tourism.jp/photo/detail_1400122.html) — `assets/photos/kb-69207bb18dbf3179.jpg`
+- **関門トンネル人道の内部** — 山口県観光連盟・写真提供者 — [観光PR用の画像利用規約](https://yamaguchi-tourism.jp/photo/detail_1700564.html) — [出典](https://yamaguchi-tourism.jp/photo/detail_1700564.html) — `assets/photos/kb-1ac25d0e90b64d0e.jpg`
+- **土井ヶ浜** — 山口県観光連盟・写真提供者 — [観光PR用の画像利用規約](https://yamaguchi-tourism.jp/photo/detail_1700581.html) — [出典](https://yamaguchi-tourism.jp/photo/detail_1700581.html) — `assets/photos/kb-1f8cb9094b2bd2dd.jpg`
+- **下関駅** — Hirosin41 — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:Shimonoseki_station_20150502.JPG) — `assets/photos/kb-b2821cbfa25a53d2.jpg`
+- **吉見駅** — Hotaru2025 — [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en) — [出典](https://commons.wikimedia.org/wiki/File:Yoshimi_Station_2025.jpg) — `assets/photos/kb-20b19a11d3aeeabf.jpg`
+- **川棚温泉** — Li04ig27 — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:Kawatana_Hot_Springs_(Shimonoseki).jpg) — `assets/photos/kb-a0e77e73a8eb9dac.jpg`
+- **湯玉駅** — Bakkai at Japanese Wikipedia — [CC BY 3.0](https://creativecommons.org/licenses/by/3.0) — [出典](https://commons.wikimedia.org/wiki/File:Yutama_stn.jpg) — `assets/photos/kb-af18efb10a82df9d.jpg`
+- **角島灯台** — 藤谷良秀 — [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) — [出典](https://commons.wikimedia.org/wiki/File:Tsunoshima_light_house_2012.jpg) — `assets/photos/kb-fff7d9e1a0bbb3dc.jpg`
+- **滝部駅** — Muyo — [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) — [出典](https://commons.wikimedia.org/wiki/File:JRWest_Takibe_Station01.jpg) — `assets/photos/kb-adf50e8cfc43a0b4.jpg`
+- **道の駅蛍街道西ノ市** — アラツク — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:Michinoeki_HotaruKaido.JPG) — `assets/photos/kb-9bb78515bb963a96.jpg`
+- **道の駅きくがわ** — ja:User:Sanjo — [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) — [出典](https://commons.wikimedia.org/wiki/File:Michinoeki_Kikugawa_2011.JPG) — `assets/photos/kb-6273e3ccbd0cf57b.jpg`
+- **功山寺** — Wiki708 at Japanese Wikipedia — [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) — [出典](https://commons.wikimedia.org/wiki/File:Kozanji_Temple_(Shimonoseki).JPG) — `assets/photos/kb-ef5bc88591fc2099.jpg`
+- **赤間神宮** — No machine-readable author provided. Usiwakamaru assumed (based on copyright claims). — [Public domain](https://commons.wikimedia.org/wiki/File:Akama_jingu.JPG) — [出典](https://commons.wikimedia.org/wiki/File:Akama_jingu.JPG) — `assets/photos/kb-493a448cce32da0d.jpg`
+- **門司港駅** — jason199567 — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:%E9%96%80%E5%8F%B8%E6%B8%AF%E9%A7%85%E6%AD%A3%E9%9D%A2.jpg) — `assets/photos/kb-a9c74680ab67fc01.jpg`
+- **唐戸市場** — なしはな — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:%E5%94%90%E6%88%B8%E5%B8%82%E5%A0%B4202309.jpg) — `assets/photos/kb-2fee68617347e0e2.jpg`

@@ -7,9 +7,10 @@ on:
       - 'index.html'
       - 'assets/guide-enhancements.js'
       - 'assets/main-settings.js'
+      - 'assets/trip-catalog.js'
       - 'scripts/test_site.py'
       - 'scripts/test_settings.py'
-      - 'scripts/test_dialog_size.py'
+      - 'scripts/test_kaikyokan.py'
       - 'maintenance/verify_live.py'
   workflow_run:
     workflows: ['pages build and deployment']
@@ -23,7 +24,7 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
         with:
@@ -32,7 +33,7 @@ jobs:
         run: |
           python -m pip install Pillow playwright
           python -m playwright install chromium --with-deps
-      - name: Test waypoint navigation, photo galleries, and seven screen sizes
+      - name: Test every itinerary, photo galleries, and seven screen sizes
         run: python -u scripts/test_site.py
       - name: Verify live HTTPS files, photographs, and rest-day navigation
         run: python -u maintenance/verify_live.py
@@ -40,6 +41,10 @@ jobs:
         env:
           SITE_URL: https://25d-228.github.io/kyushu-cycle-guide/
         run: python -u scripts/test_settings.py
+      - name: Verify the independent aquarium trial and all three trip selectors on the live site
+        env:
+          SITE_URL: https://25d-228.github.io/kyushu-cycle-guide/
+        run: python -u scripts/test_kaikyokan.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -48,6 +53,8 @@ jobs:
             live-verification.json
             browser-test-report.json
             settings-test-report.json
+            kaikyokan-test-report.json
+            kaikyokan-*.png
             settings-*.png
             live-*.png
             test-*.png

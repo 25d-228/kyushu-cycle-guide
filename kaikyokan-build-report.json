@@ -1,0 +1,11 @@
+{
+  "days": 5,
+  "restDay": 4,
+  "cyclingKm": [
+    183,
+    235
+  ],
+  "railLegs": 2,
+  "walkingLegs": 1,
+  "oldItinerariesUnchanged": true
+}
