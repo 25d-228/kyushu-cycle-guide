@@ -1,0 +1,105 @@
+{
+  "url": "http://127.0.0.1:8878/",
+  "status": "passed",
+  "navigationPositions": 81,
+  "days": 28,
+  "restDays": 6,
+  "kyotoNights": 3,
+  "noRailOrFerry": true,
+  "walkingCrossings": 2,
+  "distinctShimonosekiBookings": true,
+  "layouts": [
+    [
+      1920,
+      1080,
+      {
+        "x": 57.5,
+        "y": 32.5,
+        "w": 1805,
+        "h": 1015,
+        "scroll": 1793,
+        "client": 1793,
+        "body": 486
+      }
+    ],
+    [
+      1440,
+      1000,
+      {
+        "x": 43,
+        "y": 30,
+        "w": 1354,
+        "h": 940,
+        "scroll": 1342,
+        "client": 1342,
+        "body": 411
+      }
+    ],
+    [
+      1024,
+      768,
+      {
+        "x": 30.5,
+        "y": 23,
+        "w": 963,
+        "h": 722,
+        "scroll": 951,
+        "client": 951,
+        "body": 193
+      }
+    ],
+    [
+      768,
+      1024,
+      {
+        "x": 23,
+        "y": 30.5,
+        "w": 722,
+        "h": 963,
+        "scroll": 710,
+        "client": 710,
+        "body": 550
+      }
+    ],
+    [
+      390,
+      844,
+      {
+        "x": 11.5,
+        "y": 25.5,
+        "w": 367,
+        "h": 793,
+        "scroll": 355,
+        "client": 355,
+        "body": 360
+      }
+    ],
+    [
+      320,
+      568,
+      {
+        "x": 0,
+        "y": 17,
+        "w": 320,
+        "h": 534,
+        "scroll": 308,
+        "client": 308,
+        "body": 244
+      }
+    ],
+    [
+      844,
+      390,
+      {
+        "x": 25.5,
+        "y": 11.5,
+        "w": 793,
+        "h": 367,
+        "scroll": 781,
+        "client": 781,
+        "body": 136
+      }
+    ]
+  ],
+  "pageErrors": []
+}
