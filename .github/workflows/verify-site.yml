@@ -8,9 +8,12 @@ on:
       - 'assets/guide-enhancements.js'
       - 'assets/main-settings.js'
       - 'assets/trip-catalog.js'
+      - 'assets/kyoto-trip.js'
+      - 'assets/kyoto-details.js'
       - 'scripts/test_site.py'
       - 'scripts/test_settings.py'
       - 'scripts/test_kaikyokan.py'
+      - 'scripts/test_kyoto.py'
       - 'maintenance/verify_live.py'
   workflow_run:
     workflows: ['pages build and deployment']
@@ -41,10 +44,14 @@ jobs:
         env:
           SITE_URL: https://25d-228.github.io/kyushu-cycle-guide/
         run: python -u scripts/test_settings.py
-      - name: Verify the independent aquarium trial and all three trip selectors on the live site
+      - name: Verify the independent aquarium trial and all four trip selectors on the live site
         env:
           SITE_URL: https://25d-228.github.io/kyushu-cycle-guide/
         run: python -u scripts/test_kaikyokan.py
+      - name: Verify Kyoto outbound and return navigation, consecutive rest days, and hotel dates
+        env:
+          SITE_URL: https://25d-228.github.io/kyushu-cycle-guide/
+        run: python -u scripts/test_kyoto.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -54,6 +61,8 @@ jobs:
             browser-test-report.json
             settings-test-report.json
             kaikyokan-test-report.json
+            kyoto-test-report.json
+            kyoto-*.png
             kaikyokan-*.png
             settings-*.png
             live-*.png

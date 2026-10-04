@@ -246,7 +246,7 @@
   search.addEventListener('submit',event=>{
     event.preventDefault();const input=search.querySelector('input'),name=input.value.trim(),s=search.querySelector('p');
     if(!Object.hasOwn(DATA.places,name)){s.setAttribute('data-error','');s.textContent='その地名は見つかりませんでした。入力欄の候補から選んでください。';input.setAttribute('aria-invalid','true');input.focus();return;}
-    const modes=['small','kaikyo','main'].filter(m=>DATA[m].some(d=>d.stops.includes(name)));
+    const modes=['small','kaikyo','main','kyoto'].filter(m=>DATA[m].some(d=>d.stops.includes(name)));
     const current=window.JourneyNavigator?.getState().mode;
     input.focus();openPlace(name,modes.includes(current)?current:modes[0]||'main');
   });

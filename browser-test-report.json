@@ -1,11 +1,16 @@
 {
-  "waypointsWithPhotos": 109,
-  "navigationPositionsTested": 133,
+  "waypointsWithPhotos": 151,
+  "navigationPositionsTested": 214,
   "restDayGalleries": {
     "日田": 3,
     "熊本": 3,
     "宮崎": 3,
-    "下関": 3
+    "下関": 3,
+    "京都": 3,
+    "広島": 2,
+    "姫路": 2,
+    "松江": 2,
+    "萩": 2
   },
   "pageErrors": [],
   "mobileLayout": "passed",
