@@ -1,0 +1,21 @@
+{
+  "days": 28,
+  "ridingDays": 22,
+  "restDays": [
+    6,
+    10,
+    13,
+    14,
+    20,
+    25
+  ],
+  "nights": 27,
+  "cyclingKm": [
+    1690,
+    2130
+  ],
+  "railLegs": 0,
+  "ferryLegs": 0,
+  "walkingLegs": 2,
+  "oldItinerariesUnchanged": true
+}

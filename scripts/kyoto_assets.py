@@ -7,6 +7,26 @@ ROOT=Path(__file__).resolve().parents[1]
 base=ROOT/'scripts/kaikyokan_photos.py'
 prefix=base.read_text().split('# Tourist-board photographs')[0].replace("'kb-'","'ky-'")
 ns={'__file__':str(base)};exec(compile(prefix,str(base),'exec'),ns)
+# Pace requests and honor server rate limits. Never bypass throttling.
+import time
+from urllib.request import Request,urlopen
+from urllib.error import HTTPError
+last_request=0.0
+def polite_get(url):
+ global last_request
+ for attempt in range(4):
+  time.sleep(max(0,1.05-(time.monotonic()-last_request)))
+  last_request=time.monotonic()
+  try:
+   with urlopen(Request(url,headers=ns['UA']),timeout=30) as response:return response.read()
+  except HTTPError as e:
+   if e.code not in (429,500,502,503,504) or attempt==3:raise
+   raw=e.headers.get('Retry-After','60')
+   try:delay=max(60,int(raw))
+   except ValueError:delay=60
+   print('Pausing image requests after',e.code,'for',delay,'seconds',flush=True)
+   time.sleep(delay)
+ns['get']=polite_get
 manifest=ns['manifest'];wiki=ns['wiki'];added=ns['added'];missing=[]
 targets=dict(K.PHOTO_TITLES)
 targets.update({'備前':['伊部駅'],'赤穂':['播州赤穂駅'],'豊岡':['豊岡駅 (兵庫県)'],'出雲':['出雲市駅'],'長門':['長門市駅']})

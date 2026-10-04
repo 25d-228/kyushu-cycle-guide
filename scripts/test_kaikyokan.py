@@ -22,13 +22,13 @@ try:
         assert page.locator('#itineraryRows tr').count()==length
         assert mode in page.evaluate('Object.keys(TRAVEL.overnight)')
     page.evaluate('setMode("compare")');wait(page)
-    assert set(page.locator('#routeLayer [data-route-mode]').evaluate_all('nodes=>nodes.map(n=>n.dataset.routeMode)'))=={'small','kaikyo','main'}
-    assert page.locator('#panelBody [data-open-mode]').count()==3
+    assert set(page.locator('#routeLayer [data-route-mode]').evaluate_all('nodes=>nodes.map(n=>n.dataset.routeMode)'))=={'small','kaikyo','main','kyoto'}
+    assert page.locator('#panelBody [data-open-mode]').count()==4
     report['tests'].append('Three independent trip selectors, comparison cards and route layers')
     page.evaluate('setMode("kaikyo")');wait(page)
     assert page.locator('#kaikyokanTripNotes').is_visible()
     assert '輪行' in page.locator('#kaikyokanTripNotes').inner_text()
-    dates={'small':'2027-04-01','kaikyo':'2027-04-10','main':'2027-05-01'}
+    dates={'small':'2027-04-01','kaikyo':'2027-04-10','main':'2027-05-01','kyoto':'2027-10-01'}
     for mode,date in dates.items():
         page.locator('[data-schedule='+mode+']').click();page.locator('#startDate').fill(date);page.locator('#startDate').dispatch_event('change')
     assert page.evaluate('state.dates')==dates

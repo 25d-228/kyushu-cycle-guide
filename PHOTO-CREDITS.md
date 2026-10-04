@@ -119,3 +119,58 @@
 - **赤間神宮** — No machine-readable author provided. Usiwakamaru assumed (based on copyright claims). — [Public domain](https://commons.wikimedia.org/wiki/File:Akama_jingu.JPG) — [出典](https://commons.wikimedia.org/wiki/File:Akama_jingu.JPG) — `assets/photos/kb-493a448cce32da0d.jpg`
 - **門司港駅** — jason199567 — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:%E9%96%80%E5%8F%B8%E6%B8%AF%E9%A7%85%E6%AD%A3%E9%9D%A2.jpg) — `assets/photos/kb-a9c74680ab67fc01.jpg`
 - **唐戸市場** — なしはな — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:%E5%94%90%E6%88%B8%E5%B8%82%E5%A0%B4202309.jpg) — `assets/photos/kb-2fee68617347e0e2.jpg`
+
+## 京都往復の追加写真
+
+実際の撮影写真をライセンス確認後に保存しています。各写真は撮影当時の様子で、現在の営業・通行状況を示すものではありません。表示用の縮小・トリミングがあります。
+
+- **宇部駅** — Rsa — [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) — [出典](https://commons.wikimedia.org/wiki/File:20210408_Ube-Station.jpg) — `assets/photos/ky-9ee6aa810fd84123.jpg`
+- **湯田温泉駅** — Saigen Jiro — [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en) — [出典](https://commons.wikimedia.org/wiki/File:Yuda-Onsen_Station,_ekisha-1.jpg) — `assets/photos/ky-4c4fa4e469c98195.jpg`
+- **防府駅** — Saigen Jiro — [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en) — [出典](https://commons.wikimedia.org/wiki/File:Hofu_Station,_Minatoguchi.jpg) — `assets/photos/ky-43850d93e90c00bb.jpg`
+- **徳山駅** — isiz — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:%E3%81%BF%E3%82%86%E3%81%8D%E5%8F%A3.jpg) — `assets/photos/ky-ede5eda7f4f8fcca.jpg`
+- **柳井駅** — Saigen Jiro — [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en) — [出典](https://commons.wikimedia.org/wiki/File:Yanai_Station,_ekisha.JPG) — `assets/photos/ky-ddb404798ef750fb.jpg`
+- **錦帯橋** — Jakub Hałun — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:20100724_Iwakuni_5235.jpg) — `assets/photos/ky-f284af92c912f610.jpg`
+- **宮島口駅** — Sashimiteishoku — [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en) — [出典](https://commons.wikimedia.org/wiki/File:Miyajimaguchi_Station_202607.jpg) — `assets/photos/ky-d80b3cc96696db9e.jpg`
+- **原爆ドーム** — Oilstreet — [CC BY 2.5](https://creativecommons.org/licenses/by/2.5) — [出典](https://commons.wikimedia.org/wiki/File:Genbaku_Dome04-r.JPG) — `assets/photos/ky-5d461797c480ef43.jpg`
+- **呉駅** — Kintetsu2610 — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:Kure-station.jpg) — `assets/photos/ky-a38f22943088ae2f.jpg`
+- **竹原駅** — OS6 — [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) — [出典](https://commons.wikimedia.org/wiki/File:%E7%AB%B9%E5%8E%9F%E9%A7%85_Takehara_station_-_panoramio.jpg) — `assets/photos/ky-8bb09cb95c523c16.jpg`
+- **三原駅** — そらみみ — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:Mihara_Station_20180429.jpg) — `assets/photos/ky-19e70d02aca13f67.jpg`
+- **尾道駅** — Tokyo-Good — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:Onomichi-Station-new-South-building2020.jpg) — `assets/photos/ky-c3009768bdd88f32.jpg`
+- **福山駅** — 1stfinal — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:Fukuyama_Station_Building_(South)_20200927.jpg) — `assets/photos/ky-b931f0f55b32aaad.jpg`
+- **倉敷美観地区** — Miya.m — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:Kurasiki_morning01.JPG) — `assets/photos/ky-286451876e9a6c2d.jpg`
+- **岡山駅** — ほっきー — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:%E5%B2%A1%E5%B1%B1%E9%A7%85_%E6%9D%B1%E5%8F%A3_2022.jpg) — `assets/photos/ky-d3321c49866b4f89.jpg`
+- **伊部駅** — 663highland — [CC BY 2.5](https://creativecommons.org/licenses/by/2.5) — [出典](https://commons.wikimedia.org/wiki/File:Bizen-yaki_Traditional_Pottery_Center_Bizen_Okayama_pref_Japan01bs5.jpg) — `assets/photos/ky-5ec1042bd23dfeba.jpg`
+- **播州赤穂駅** — Asturio Cantabrio — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:JR_Banshu-Ako_Station_2021-03_ac.jpg) — `assets/photos/ky-babef490cf84cf80.jpg`
+- **姫路城** — Nikos Kitsakis — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:Himeji_castle_in_may_2015.jpg) — `assets/photos/ky-533666ffd8ac2b64.jpg`
+- **明石城** — KishujiRapid — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:Akashi_Castle_20200623.jpg) — `assets/photos/ky-241c7fca67e9ba76.jpg`
+- **神戸ポートタワー** — Naokijp — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:KOBE_PORT_TOWER_001.jpg) — `assets/photos/ky-81ebe4e163fbd79b.jpg`
+- **大阪駅** — Sakai Yayoi — [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en) — [出典](https://commons.wikimedia.org/wiki/File:JR_Osaka_Station_2026.jpg) — `assets/photos/ky-0bdd7e70510d8d32.jpg`
+- **淀駅** — KishujiRapid — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:Keihan_Yodo_Station_Chuo_Gate.jpg) — `assets/photos/ky-1de0546030cc6213.jpg`
+- **二条城** — ほっきー — [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en) — [出典](https://commons.wikimedia.org/wiki/File:%E4%BA%8C%E6%9D%A1%E5%9F%8E_%E5%94%90%E9%96%80_2025.jpg) — `assets/photos/ky-1bce7a989fae338c.jpg`
+- **亀岡駅** — Saigen Jiro — [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en) — [出典](https://commons.wikimedia.org/wiki/File:Kameoka_Station_ekisha.JPG) — `assets/photos/ky-5ae67c16423a5fd7.jpg`
+- **道の駅丹波マーケス** — Puchi-masashi — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:R009-2019-113.jpg) — `assets/photos/ky-84e907b579c34089.jpg`
+- **福知山城** — 投稿者が撮影 — [Public domain](https://commons.wikimedia.org/wiki/File:Fukuchiyama_castle19.jpg) — [出典](https://commons.wikimedia.org/wiki/File:Fukuchiyama_castle19.jpg) — `assets/photos/ky-c0cc12e6c13c3dbf.jpg`
+- **豊岡駅 (兵庫県)** — KishujiRapid — [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) — [出典](https://commons.wikimedia.org/wiki/File:JR_KTR_Tyooka_Station.JPG) — `assets/photos/ky-747785764890fb74.jpg`
+- **香住駅** — 663highland — [CC BY 2.5](https://creativecommons.org/licenses/by/2.5) — [出典](https://commons.wikimedia.org/wiki/File:Kasumi_sta01nt3200.jpg) — `assets/photos/ky-b41a819176ed839a.jpg`
+- **浜坂駅** — PekePON — [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) — [出典](https://commons.wikimedia.org/wiki/File:Hamasaka_Station_2011.jpg) — `assets/photos/ky-22a4ca47d33d7baf.jpg`
+- **鳥取砂丘** — Hashi photo — [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) — [出典](https://commons.wikimedia.org/wiki/File:Tottori-Sakyu_Tottori_Japan.JPG) — `assets/photos/ky-5b4dab5bb3d78636.jpg`
+- **倉吉駅** — Saigen Jiro — [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en) — [出典](https://commons.wikimedia.org/wiki/File:Kurayoshi_Station,_ekisha.jpg) — `assets/photos/ky-6312442c68733695.jpg`
+- **米子駅** — You19994 — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:%E7%B1%B3%E5%AD%90%E9%A7%85%E9%A7%85%E8%88%8E.jpg) — `assets/photos/ky-188156a514a65b47.jpg`
+- **松江城** — KishujiRapid — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:Matsue_Castle_Keep_Tower_20230617.jpg) — `assets/photos/ky-b5cf6b34739c1e77.jpg`
+- **出雲市駅** — 663highland — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:150322_Izumoshi_Station_Izumo_Shimane_pref_Japan01s5.jpg) — `assets/photos/ky-e3a8f2dba938aa0b.jpg`
+- **大田市駅** — 上条ジョー — [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en) — [出典](https://commons.wikimedia.org/wiki/File:Oodashi_station.JPG) — `assets/photos/ky-9e0827b88a6bc9c5.jpg`
+- **江津駅** — 663highland — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:180503_Gotsu_Station_Gotsu_Shimane_pref_Japan04n.jpg) — `assets/photos/ky-958681e8f15f594f.jpg`
+- **浜田駅** — Asturio Cantabrio — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:JR_Hamada_Station_ac.jpg) — `assets/photos/ky-2b11ec33a949ac54.jpg`
+- **益田駅** — Sengoku40 — [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) — [出典](https://commons.wikimedia.org/wiki/File:Masuda_station01.JPG) — `assets/photos/ky-e72653e959172e8d.jpg`
+- **須佐駅** — 東京特許許可局 — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:JR_Susa_sta_001.jpg) — `assets/photos/ky-757e380e00e3893f.jpg`
+- **萩城** — renfield kuroda from Tokyo, Japan — [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0) — [出典](https://commons.wikimedia.org/wiki/File:Hagi_Castle_-Honmaru.jpg) — `assets/photos/ky-25749131c282fd74.jpg`
+- **長門市駅** — ほっきー — [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en) — [出典](https://commons.wikimedia.org/wiki/File:%E9%95%B7%E9%96%80%E5%B8%82%E9%A7%85%E8%88%8E_2024.jpg) — `assets/photos/ky-dd4927b530ca2d44.jpg`
+- **美祢駅** — ノボホショコロトソ — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) — [出典](https://commons.wikimedia.org/wiki/File:Mine_Station_04.jpg) — `assets/photos/ky-a6d51fc812de4d41.jpg`
+- **京都鉄道博物館** — Rsa — [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) — [出典](https://commons.wikimedia.org/wiki/File:KYOTO_RAILWAY_MUSEUM_Entrance_20160321.JPG) — `assets/photos/ky-d93bafcc89221363.jpg`
+- **渡月橋** — Blue Lotus from Arashiyama, Kyoto — [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) — [出典](https://commons.wikimedia.org/wiki/File:Togetsukyo_in_Kyoto_Arashiyama.jpg) — `assets/photos/ky-8625f2e4ed53c0c5.jpg`
+- **広島平和記念公園** — Motokoka — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) — [出典](https://commons.wikimedia.org/wiki/File:Hiroshima_Peace_Memorial_Museum_1.jpg) — `assets/photos/ky-58036baa2e7cd717.jpg`
+- **好古園** — 663highland — [CC BY 2.5](https://creativecommons.org/licenses/by/2.5) — [出典](https://commons.wikimedia.org/wiki/File:Himeji_Koukoen10bs4592.jpg) — `assets/photos/ky-aa5b437dbe0efc18.jpg`
+- **島根県立美術館** — 663highland — [CC BY 2.5](https://creativecommons.org/licenses/by/2.5) — [出典](https://commons.wikimedia.org/wiki/File:Shimane_Art_Museum16s3.jpg) — `assets/photos/ky-cce0649f9b330162.jpg`
+- **萩博物館** — TT mk2 — [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) — [出典](https://commons.wikimedia.org/wiki/File:Hagi_museum_main_building.JPG) — `assets/photos/ky-0c7b4ffc6b649d6c.jpg`
+- **後楽園** — Fjkelfeimvvn — [CC BY 3.0](https://creativecommons.org/licenses/by/3.0) — [出典](https://commons.wikimedia.org/wiki/File:Okayama_Korakuen_Garden01.jpg) — `assets/photos/ky-974a74e554f84852.jpg`
+- **メリケンパーク** — 663highland — [CC BY 2.5](https://creativecommons.org/licenses/by/2.5) — [出典](https://commons.wikimedia.org/wiki/File:Kobe_Meriken_Park01bs3200.jpg) — `assets/photos/ky-3fad8352101b98f8.jpg`
