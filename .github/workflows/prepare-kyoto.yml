@@ -26,6 +26,7 @@ jobs:
           python -m playwright install chromium --with-deps
       - name: Add the itinerary and context-aware rest and hotel dates
         run: |
+          python -u scripts/refine_kyoto.py
           python -u scripts/add_kyoto.py
           node --check assets/kyoto-trip.js
           node --check assets/kyoto-details.js
