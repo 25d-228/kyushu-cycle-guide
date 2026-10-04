@@ -12,3 +12,28 @@ p=ROOT/'scripts/kyoto_data.py';s=p.read_text();line="PHOTO_TITLES['明石']=['�
 if "PHOTO_TITLES['明石']=" not in s:s=s.replace('TOTAL=[',line+'TOTAL=[',1)
 p.write_text(s)
 p=ROOT/'assets/kyoto-details.js';s=p.read_text().replace('架空の宿や未確認の料金は表示しません。','料金・空室・自転車の保管条件は、リンク先や宿への問い合わせで確認してください。');p.write_text(s)
+p=ROOT/'scripts/kyoto_assets.py';s=p.read_text()
+needle="manifest=ns['manifest'];wiki=ns['wiki'];added=ns['added'];missing=[]"
+if 'polite_get' not in s:
+ s=s.replace(needle, """# Pace requests and honor server rate limits. Never bypass throttling.
+import time
+from urllib.request import Request,urlopen
+from urllib.error import HTTPError
+last_request=0.0
+def polite_get(url):
+ global last_request
+ for attempt in range(4):
+  time.sleep(max(0,1.05-(time.monotonic()-last_request)))
+  last_request=time.monotonic()
+  try:
+   with urlopen(Request(url,headers=ns['UA']),timeout=30) as response:return response.read()
+  except HTTPError as e:
+   if e.code not in (429,500,502,503,504) or attempt==3:raise
+   raw=e.headers.get('Retry-After','60')
+   try:delay=max(60,int(raw))
+   except ValueError:delay=60
+   print('Pausing image requests after',e.code,'for',delay,'seconds',flush=True)
+   time.sleep(delay)
+ns['get']=polite_get
+"""+needle,1)
+p.write_text(s)
